@@ -38,7 +38,7 @@ echo '</betaarm>' >> chrome.tmp.xml
 echo '<devarm>' >> chrome.tmp.xml
 cat dev-arm.format.xml | grep '<manifest version' >> chrome.tmp.xml
 cat dev-arm.format.xml | grep '<url codebase="https://dl.google.com/' >> chrome.tmp.xml
-cat dev-x86.format.xml | grep '<package fp' >> chrome.tmp.xml
+cat dev-arm.format.xml | grep '<package fp' >> chrome.tmp.xml
 echo '</devarm>' >> chrome.tmp.xml
 
 echo '<canaryarm>' >> chrome.tmp.xml
