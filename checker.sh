@@ -15,7 +15,7 @@ curl "https://tools.google.com/service/update2" --data "<?xml version='1.0' enco
             <app appid='{8A69D345-D564-463C-AFF1-A69D9E530F96}' ap='-multi-chrome' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > ./tmp/stable-x86.unformat.xml
+            </request>" > ./tmp/stable-arm.unformat.xml
 
 echo ''
 echo '-------------------------------------'
@@ -32,7 +32,7 @@ curl "https://tools.google.com/service/update2" --data "<?xml version='1.0' enco
             <app appid='{8A69D345-D564-463C-AFF1-A69D9E530F96}' ap='1.1-beta' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > ./tmp/beta-x86.unformat.xml
+            </request>" > ./tmp/beta-arm.unformat.xml
 
 echo ''
 echo '-------------------------------------'
@@ -49,7 +49,7 @@ curl "https://tools.google.com/service/update2" --data "<?xml version='1.0' enco
             <app appid='{8A69D345-D564-463C-AFF1-A69D9E530F96}' ap='2.0-dev' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > ./tmp/dev-x86.unformat.xml
+            </request>" > ./tmp/dev-arm.unformat.xml
 
 echo ''
 echo '-------------------------------------'
@@ -66,4 +66,4 @@ curl "https://tools.google.com/service/update2" --data "<?xml version='1.0' enco
             <app appid='{4EA16AC7-FD5A-47C3-875B-DBF4A2008C20}' ap='' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > ./tmp/canary-x86.unformat.xml
+            </request>" > ./tmp/canary-arm.unformat.xml
