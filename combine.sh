@@ -23,29 +23,29 @@ echo '<chromechecker>' >> chrome.tmp.xml
 DATE="$(echo $(date --rfc-2822))"
 echo '<time checktime="'$DATE'"/>' >> chrome.tmp.xml
 
-echo '<stablearm>' >> chrome.tmp.xml
+echo '<stable-arm>' >> chrome.tmp.xml
 cat stable-arm.format.xml | grep '<manifest version' >> chrome.tmp.xml
 cat stable-arm.format.xml | grep '<url codebase="https://dl.google.com/' >> chrome.tmp.xml
 cat stable-arm.format.xml | grep '<package fp' >> chrome.tmp.xml
-echo '</stablearm>' >> chrome.tmp.xml
+echo '</stable-arm>' >> chrome.tmp.xml
 
-echo '<betaarm>' >> chrome.tmp.xml
+echo '<beta-arm>' >> chrome.tmp.xml
 cat beta-arm.format.xml | grep '<manifest version' >> chrome.tmp.xml
 cat beta-arm.format.xml | grep '<url codebase="https://dl.google.com/' >> chrome.tmp.xml
 cat beta-arm.format.xml | grep '<package fp' >> chrome.tmp.xml
-echo '</betaarm>' >> chrome.tmp.xml
+echo '</beta-arm>' >> chrome.tmp.xml
 
-echo '<devarm>' >> chrome.tmp.xml
+echo '<dev-arm>' >> chrome.tmp.xml
 cat dev-arm.format.xml | grep '<manifest version' >> chrome.tmp.xml
 cat dev-arm.format.xml | grep '<url codebase="https://dl.google.com/' >> chrome.tmp.xml
 cat dev-arm.format.xml | grep '<package fp' >> chrome.tmp.xml
 echo '</devarm>' >> chrome.tmp.xml
 
-echo '<canaryarm>' >> chrome.tmp.xml
+echo '<canary-arm>' >> chrome.tmp.xml
 cat canary-arm.format.xml | grep '<manifest version' >> chrome.tmp.xml
 cat canary-arm.format.xml | grep '<url codebase="https://dl.google.com/' >> chrome.tmp.xml
 cat canary-arm.format.xml | grep '<package fp' >> chrome.tmp.xml
-echo '</canaryarm>' >> chrome.tmp.xml
+echo '</canary-arm>' >> chrome.tmp.xml
 
 echo '</chromechecker>' >> chrome.tmp.xml
 
