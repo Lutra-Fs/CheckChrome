@@ -6,9 +6,9 @@ echo ''
 
 cd ./tmp
 xmllint --format stable-arm.unformat.xml > stable-arm.format.xml
-xmllint --format beta-x86.unformat.xml > beta-arm.format.xml
-xmllint --format dev-x86.unformat.xml > dev-arm.format.xml
-xmllint --format canary-x64.unformat.xml > canary-arm.format.xml
+xmllint --format beta-arm.unformat.xml > beta-arm.format.xml
+xmllint --format dev-arm.unformat.xml > dev-arm.format.xml
+xmllint --format canary-arm.unformat.xml > canary-arm.format.xml
 
 echo ''
 echo '-------------------------------------'
