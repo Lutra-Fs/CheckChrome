@@ -109,52 +109,60 @@ cp -rf src/index.html tmp/index.html
 
 sed -i "s/{{CheckTime}}/$checktime/g" tmp/index.html
 
-sed -i "s/{{Stable32-Version}}/$stable32_version/g" tmp/index.html
-sed -i "s/{{Stable32-SHA256}}/$stable32_sha256/g" tmp/index.html
-sed -i "s/{{Stable32-dl-main}}/$stable32_dl/g" tmp/index.html
-sed -i "s/{{Stable32-dl-alternative}}/$stable32_dl_alt/g" tmp/index.html
-sed -i "s/{{Stable32-Size}}/$stable32_size/g" tmp/index.html
+sed -i "s|{{Stable32-Version}}|$stable32_version|g" tmp/index.html
+sed -i "s|{{Stable32-SHA256}}|$stable32_sha256|g" tmp/index.html
+sed -i "s|{{Stable32-dl-main}}|$stable32_dl|g" tmp/index.html
+sed -i "s|{{Stable32-dl-alternative}}|$stable32_dl_alt|g" tmp/index.html
+sed -i "s|{{Stable32-dl-cache}}|$stable32_dl_cache|g" tmp/index.html
+sed -i "s|{{Stable32-Size}}|$stable32_size|g" tmp/index.html
 
-sed -i "s/{{Stable64-Version}}/$stable64_version/g" tmp/index.html
-sed -i "s/{{Stable64-SHA256}}/$stable64_sha256/g" tmp/index.html
-sed -i "s/{{Stable64-dl-main}}/$stable64_dl/g" tmp/index.html
-sed -i "s/{{Stable64-dl-alternative}}/$stable64_dl_alt/g" tmp/index.html
-sed -i "s/{{Stable64-Size}}/$stable64_size/g" tmp/index.html
+sed -i "s|{{Stable64-Version}}|$stable64_version|g" tmp/index.html
+sed -i "s|{{Stable64-SHA256}}|$stable64_sha256|g" tmp/index.html
+sed -i "s|{{Stable64-dl-main}}|$stable64_dl|g" tmp/index.html
+sed -i "s|{{Stable64-dl-alternative}}|$stable64_dl_alt|g" tmp/index.html
+sed -i "s|{{Stable64-dl-cache}}|$stable64_dl_cache|g" tmp/index.html
+sed -i "s|{{Stable64-Size}}|$stable64_size|g" tmp/index.html
 
-sed -i "s/{{Beta32-Version}}/$beta32_version/g" tmp/index.html
-sed -i "s/{{Beta32-SHA256}}/$beta32_sha256/g" tmp/index.html
-sed -i "s/{{Beta32-dl-main}}/$beta32_dl/g" tmp/index.html
-sed -i "s/{{Beta32-dl-alternative}}/$beta32_dl_alt/g" tmp/index.html
-sed -i "s/{{Beta32-Size}}/$beta32_size/g" tmp/index.html
+sed -i "s|{{Beta32-Version}}|$beta32_version|g" tmp/index.html
+sed -i "s|{{Beta32-SHA256}}|$beta32_sha256|g" tmp/index.html
+sed -i "s|{{Beta32-dl-main}}|$beta32_dl|g" tmp/index.html
+sed -i "s|{{Beta32-dl-alternative}}|$beta32_dl_alt|g" tmp/index.html
+sed -i "s|{{Beta32-dl-cache}}|$beta32_dl_cache|g" tmp/index.html
+sed -i "s|{{Beta32-Size}}|$beta32_size|g" tmp/index.html
 
-sed -i "s/{{Beta64-Version}}/$beta64_version/g" tmp/index.html
-sed -i "s/{{Beta64-SHA256}}/$beta64_sha256/g" tmp/index.html
-sed -i "s/{{Beta64-dl-main}}/$beta64_dl/g" tmp/index.html
-sed -i "s/{{Beta64-dl-alternative}}/$beta64_dl_alt/g" tmp/index.html
-sed -i "s/{{Beta64-Size}}/$beta64_size/g" tmp/index.html
+sed -i "s|{{Beta64-Version}}|$beta64_version|g" tmp/index.html
+sed -i "s|{{Beta64-SHA256}}|$beta64_sha256|g" tmp/index.html
+sed -i "s|{{Beta64-dl-main}}|$beta64_dl|g" tmp/index.html
+sed -i "s|{{Beta64-dl-alternative}}|$beta64_dl_alt|g" tmp/index.html
+sed -i "s|{{Beta64-dl-cache}}|$beta64_dl_cache|g" tmp/index.html
+sed -i "s|{{Beta64-Size}}|$beta64_size|g" tmp/index.html
 
-sed -i "s/{{Dev32-Version}}/$dev32_version/g" tmp/index.html
-sed -i "s/{{Dev32-SHA256}}/$dev32_sha256/g" tmp/index.html
-sed -i "s/{{Dev32-dl-main}}/$dev32_dl/g" tmp/index.html
-sed -i "s/{{Dev32-dl-alternative}}/$dev32_dl_alt/g" tmp/index.html
-sed -i "s/{{Dev32-Size}}/$dev32_size/g" tmp/index.html
+sed -i "s|{{Dev32-Version}}|$dev32_version|g" tmp/index.html
+sed -i "s|{{Dev32-SHA256}}|$dev32_sha256|g" tmp/index.html
+sed -i "s|{{Dev32-dl-main}}|$dev32_dl|g" tmp/index.html
+sed -i "s|{{Dev32-dl-alternative}}|$dev32_dl_alt|g" tmp/index.html
+sed -i "s|{{Dev32-dl-cache}}|$dev32_dl_cache|g" tmp/index.html
+sed -i "s|{{Dev32-Size}}|$dev32_size|g" tmp/index.html
 
-sed -i "s/{{Dev64-Version}}/$dev64_version/g" tmp/index.html
-sed -i "s/{{Dev64-SHA256}}/$dev64_sha256/g" tmp/index.html
-sed -i "s/{{Dev64-dl-main}}/$dev64_dl/g" tmp/index.html
-sed -i "s/{{Dev64-dl-alternative}}/$dev64_dl_alt/g" tmp/index.html
-sed -i "s/{{Dev64-Size}}/$dev64_size/g" tmp/index.html
+sed -i "s|{{Dev64-Version}}|$dev64_version|g" tmp/index.html
+sed -i "s|{{Dev64-SHA256}}|$dev64_sha256|g" tmp/index.html
+sed -i "s|{{Dev64-dl-main}}|$dev64_dl|g" tmp/index.html
+sed -i "s|{{Dev64-dl-alternative}}|$dev64_dl_alt|g" tmp/index.html
+sed -i "s|{{Dev64-dl-cache}}|$dev64_dl_cache|g" tmp/index.html
+sed -i "s|{{Dev64-Size}}|$dev64_size|g" tmp/index.html
 
-sed -i "s/{{Canary32-Version}}/$canary32_version/g" tmp/index.html
-sed -i "s/{{Canary32-SHA256}}/$canary32_sha256/g" tmp/index.html
-sed -i "s/{{Canary32-dl-main}}/$canary32_dl/g" tmp/index.html
-sed -i "s/{{Canary32-dl-alternative}}/$canary32_dl_alt/g" tmp/index.html
-sed -i "s/{{Canary32-Size}}/$canary32_size/g" tmp/index.html
+sed -i "s|{{Canary32-Version}}|$canary32_version|g" tmp/index.html
+sed -i "s|{{Canary32-SHA256}}|$canary32_sha256|g" tmp/index.html
+sed -i "s|{{Canary32-dl-main}}|$canary32_dl|g" tmp/index.html
+sed -i "s|{{Canary32-dl-alternative}}|$canary32_dl_alt|g" tmp/index.html
+sed -i "s|{{Canary32-dl-cache}}|$canary32_dl_cache|g" tmp/index.html
+sed -i "s|{{Canary32-Size}}|$canary32_size|g" tmp/index.html
 
-sed -i "s/{{Canary64-Version}}/$canary64_version/g" tmp/index.html
-sed -i "s/{{Canary64-SHA256}}/$canary64_sha256/g" tmp/index.html
-sed -i "s/{{Canary64-dl-main}}/$canary64_dl/g" tmp/index.html
-sed -i "s/{{Canary64-dl-alternative}}/$canary64_dl_alt/g" tmp/index.html
-sed -i "s/{{Canary64-Size}}/$canary64_size/g" tmp/index.html
+sed -i "s|{{Canary64-Version}}|$canary64_version|g" tmp/index.html
+sed -i "s|{{Canary64-SHA256}}|$canary64_sha256|g" tmp/index.html
+sed -i "s|{{Canary64-dl-main}}|$canary64_dl|g" tmp/index.html
+sed -i "s|{{Canary64-dl-alternative}}|$canary64_dl_alt|g" tmp/index.html
+sed -i "s|{{Canary64-dl-cache}}|$canary64_dl_cache|g" tmp/index.html
+sed -i "s|{{Canary64-Size}}|$canary64_size|g" tmp/index.html
 
 cp -rf tmp/index.html public/index.html
