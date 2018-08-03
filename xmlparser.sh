@@ -10,11 +10,6 @@
 #ELEMENT=Element Name
 #CONTENT=Element Content
 
-echo ''
-echo '-------------------------------------'
-echo 'Parse XML Files ......'
-echo '-------------------------------------'
-
 #接受一个int层级参数，层级从0开始
 echo_tabs() {
     local tabs="";

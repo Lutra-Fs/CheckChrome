@@ -11,4 +11,5 @@ script:
   - ./checker.sh
   - ./combine.sh
   - ./xmlparser.sh public/chrome.xml > tmp/chrome_xml_parser_result.txt
+  - ./build.sh
   - ./deploy.sh > /dev/null

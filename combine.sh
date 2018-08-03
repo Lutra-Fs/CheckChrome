@@ -102,3 +102,8 @@ cp -rf ./chrome.xml ../public/chrome.xml
 cp -rf ./chrome.min.xml ../public/chrome.min.xml
 
 cd ..
+
+echo ''
+echo '-------------------------------------'
+echo 'Parsing XML Files ......'
+echo '-------------------------------------'
