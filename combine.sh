@@ -22,7 +22,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' > chrome.tmp.xml
 
 echo '<chromechecker>' >> chrome.tmp.xml
 
-DATE="$(echo $(date '+%Y-%m-%d_%H:%M:%S'))"
+DATE="$(echo $(TZ=UTC-8 date '+%Y-%m-%d_%H:%M:%S'))"
 echo '<time checktime="'$DATE'"/>' >> chrome.tmp.xml
 
 echo '<stable86>' >> chrome.tmp.xml
