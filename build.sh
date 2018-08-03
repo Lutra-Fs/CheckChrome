@@ -26,7 +26,7 @@ stable32_size_raw=$(sed -n '12p' ./tmp/chrome_xml_parser_result.txt)
 stable32_dl="https://"${stable32_dl_base}${stable32_file}
 stable32_dl_alt="https://"${stable32_dl_alt_base}${stable32_file}
 stable32_dl_cache=${cache}${stable32_dl_alt_base}${stable32_file}
-stable32_size=$(awk 'BEGIN{printf "%.3f",('$stable32_size_raw'/'1048576')}')
+stable32_size=$(awk 'BEGIN{printf "%.3f",('$stable32_size_raw'/'1048576')}')" MB"
 
 stable64_version=$(sed -n '15p' ./tmp/chrome_xml_parser_result.txt)
 stable64_dl_base=$(sed -n '16p' ./tmp/chrome_xml_parser_result.txt)
@@ -37,7 +37,7 @@ stable64_size_raw=$(sed -n '22p' ./tmp/chrome_xml_parser_result.txt)
 stable64_dl="https://"${stable64_dl_base}${stable64_file}
 stable64_dl_alt="https://"${stable64_dl_alt_base}${stable64_file}
 stable64_dl_cache=${cache}${stable64_dl_alt_base}${stable64_file}
-stable64_size=$(awk 'BEGIN{printf "%.3f",('$stable64_size_raw'/'1048576')}')
+stable64_size=$(awk 'BEGIN{printf "%.3f",('$stable64_size_raw'/'1048576')}')" MB"
 
 beta32_version=$(sed -n '25p' ./tmp/chrome_xml_parser_result.txt)
 beta32_dl_base=$(sed -n '26p' ./tmp/chrome_xml_parser_result.txt)
@@ -48,7 +48,7 @@ beta32_size_raw=$(sed -n '32p' ./tmp/chrome_xml_parser_result.txt)
 beta32_dl="https://"${beta32_dl_base}${beta32_file}
 beta32_dl_alt="https://"${beta32_dl_alt_base}${beta32_file}
 beta32_dl_cache=${cache}${beta32_dl_alt_base}${beta32_file}
-beta32_size=$(awk 'BEGIN{printf "%.3f",('$beta32_size_raw'/'1048576')}')
+beta32_size=$(awk 'BEGIN{printf "%.3f",('$beta32_size_raw'/'1048576')}')" MB"
 
 beta64_version=$(sed -n '35p' ./tmp/chrome_xml_parser_result.txt)
 beta64_dl_base=$(sed -n '36p' ./tmp/chrome_xml_parser_result.txt)
@@ -59,7 +59,7 @@ beta64_size_raw=$(sed -n '42p' ./tmp/chrome_xml_parser_result.txt)
 beta64_dl="https://"${beta64_dl_base}${beta64_file}
 beta64_dl_alt="https://"${beta64_dl_alt_base}${beta64_file}
 beta64_dl_cache=${cache}${beta64_dl_alt_base}${beta64_file}
-beta64_size=$(awk 'BEGIN{printf "%.3f",('$beta64_size_raw'/'1048576')}')
+beta64_size=$(awk 'BEGIN{printf "%.3f",('$beta64_size_raw'/'1048576')}')" MB"
 
 dev32_version=$(sed -n '45p' ./tmp/chrome_xml_parser_result.txt)
 dev32_dl_base=$(sed -n '46p' ./tmp/chrome_xml_parser_result.txt)
@@ -70,7 +70,7 @@ dev32_size_raw=$(sed -n '22p' ./tmp/chrome_xml_parser_result.txt)
 dev32_dl="https://"${dev32_dl_base}${dev32_file}
 dev32_dl_alt="https://"${dev32_dl_alt_base}${dev32_file}
 dev32_dl_cache=${cache}${dev32_dl_alt_base}${dev32_file}
-dev32_size=$(awk 'BEGIN{printf "%.3f",('$dev32_size_raw'/'1048576')}')
+dev32_size=$(awk 'BEGIN{printf "%.3f",('$dev32_size_raw'/'1048576')}')" MB"
 
 dev64_version=$(sed -n '55p' ./tmp/chrome_xml_parser_result.txt)
 dev64_dl_base=$(sed -n '56p' ./tmp/chrome_xml_parser_result.txt)
@@ -81,7 +81,7 @@ dev64_size_raw=$(sed -n '62p' ./tmp/chrome_xml_parser_result.txt)
 dev64_dl="https://"${dev64_dl_base}${dev64_file}
 dev64_dl_alt="https://"${dev64_dl_alt_base}${dev64_file}
 dev64_dl_cache=${cache}${dev64_dl_alt_base}${dev64_file}
-dev64_size=$(awk 'BEGIN{printf "%.3f",('$dev64_size_raw'/'1048576')}')
+dev64_size=$(awk 'BEGIN{printf "%.3f",('$dev64_size_raw'/'1048576')}')" MB"
 
 canary32_version=$(sed -n '65p' ./tmp/chrome_xml_parser_result.txt)
 canary32_dl_base=$(sed -n '66p' ./tmp/chrome_xml_parser_result.txt)
@@ -92,7 +92,7 @@ canary32_size_raw=$(sed -n '72p' ./tmp/chrome_xml_parser_result.txt)
 canary32_dl="https://"${canary32_dl_base}${canary32_file}
 canary32_dl_alt="https://"${canary32_dl_alt_base}${canary32_file}
 canary32_dl_cache=${cache}${canary32_dl_alt_base}${canary32_file}
-canary32_size=$(awk 'BEGIN{printf "%.3f",('$canary32_size_raw'/'1048576')}')
+canary32_size=$(awk 'BEGIN{printf "%.3f",('$canary32_size_raw'/'1048576')}')" MB"
 
 canary64_version=$(sed -n '75p' ./tmp/chrome_xml_parser_result.txt)
 canary64_dl_base=$(sed -n '76p' ./tmp/chrome_xml_parser_result.txt)
@@ -103,7 +103,7 @@ canary64_size_raw=$(sed -n '82p' ./tmp/chrome_xml_parser_result.txt)
 canary64_dl="https://"${canary64_dl_base}${canary64_file}
 canary64_dl_alt="https://"${canary64_dl_alt_base}${canary64_file}
 canary64_dl_cache=${cache}${canary64_dl_alt_base}${canary64_file}
-canary64_size=$(awk 'BEGIN{printf "%.3f",('$canary64_size_raw'/'1048576')}')
+canary64_size=$(awk 'BEGIN{printf "%.3f",('$canary64_size_raw'/'1048576')}')" MB"
 
 cp -rf src/index.html tmp/index.html
 
