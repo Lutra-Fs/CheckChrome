@@ -1,4 +1,6 @@
-language: generic
+language: node_js
+node_js:
+  - "10"
 dist: trusty
 install:
   - sudo apt-get --yes install libxml2-utils
