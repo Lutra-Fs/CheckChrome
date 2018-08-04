@@ -10,6 +10,6 @@ script:
   - chmod +x ./deploy.sh
   - ./checker.sh
   - ./combine.sh
-  - ./xmlparser.sh public/chrome.xml > tmp/chrome_xml_parser_result.txt
+  - ./xmlparser.sh tmp/chrome.xml > tmp/chrome_xml_parser_result.txt
   - ./build.sh
   - ./deploy.sh > /dev/null

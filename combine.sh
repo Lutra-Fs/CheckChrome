@@ -91,16 +91,6 @@ echo '-------------------------------------'
 sed -i 's|">|"/>|g' chrome.tmp.xml
 xmllint --format chrome.tmp.xml > chrome.xml
 
-echo ''
-echo '-------------------------------------'
-echo 'Compressing Output ......'
-echo '-------------------------------------'
-
-xmllint --noblanks chrome.xml > chrome.min.xml
-
-cp -rf ./chrome.xml ../public/chrome.xml
-cp -rf ./chrome.min.xml ../public/chrome.min.xml
-
 cd ..
 
 echo ''

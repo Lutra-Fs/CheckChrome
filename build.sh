@@ -166,3 +166,124 @@ sed -i "s|{{Canary64-dl-cache}}|$canary64_dl_cache|g" tmp/index.html
 sed -i "s|{{Canary64-Size}}|$canary64_size|g" tmp/index.html
 
 cp -rf tmp/index.html public/index.html
+
+mkdir ./tmp/api/
+
+echo ''
+echo '-------------------------------------'
+echo 'Generate Static API ......'
+echo '-------------------------------------'
+
+echo '<?xml version="1.0" encoding="UTF-8"?>' > tmp/api/chrome.xml
+echo '<chromechecker>' >> tmp/api/chrome.tmp.xml
+DATE="$(echo $(TZ=UTC-8 date '+%Y-%m-%d %H:%M:%S'))"
+echo '<time checktime="'$DATE'"/>' >> tmp/api/chrome.tmp.xml
+
+echo '<stable32>' >> tmp/api/chrome.tmp.xml
+echo '<version>'$stable32_version'</version>' >> tmp/api/chrome.tmp.xml
+echo '<download>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$stable32_dl'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$stable32_dl_alt'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$stable32_dl_cache'</url>' >> tmp/api/chrome.tmp.xml
+echo '</download>' >> tmp/api/chrome.tmp.xml
+echo '<sha256>'$stable32_sha256'</sha256>' >> tmp/api/chrome.tmp.xml
+echo '<size>'$stable32_size_raw'</size>' >> tmp/api/chrome.tmp.xml
+echo '</stable32>' >> tmp/api/chrome.tmp.xml
+
+echo '<stable64>' >> tmp/api/chrome.tmp.xml
+echo '<version>'$stable64_version'</version>' >> tmp/api/chrome.tmp.xml
+echo '<download>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$stable64_dl'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$stable64_dl_alt'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$stable64_dl_cache'</url>' >> tmp/api/chrome.tmp.xml
+echo '</download>' >> tmp/api/chrome.tmp.xml
+echo '<sha256>'$stable64_sha256'</sha256>' >> tmp/api/chrome.tmp.xml
+echo '<size>'$stable64_size_raw'</size>' >> tmp/api/chrome.tmp.xml
+echo '</stable64>' >> tmp/api/chrome.tmp.xml
+
+echo '<beta32>' >> tmp/api/chrome.tmp.xml
+echo '<version>'$beta32_version'</version>' >> tmp/api/chrome.tmp.xml
+echo '<download>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$beta32_dl'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$beta32_dl_alt'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$beta32_dl_cache'</url>' >> tmp/api/chrome.tmp.xml
+echo '</download>' >> tmp/api/chrome.tmp.xml
+echo '<sha256>'$beta32_sha256'</sha256>' >> tmp/api/chrome.tmp.xml
+echo '<size>'$beta32_size_raw'</size>' >> tmp/api/chrome.tmp.xml
+echo '</beta32>' >> tmp/api/chrome.tmp.xml
+
+echo '<beta64>' >> tmp/api/chrome.tmp.xml
+echo '<version>'$beta64_version'</version>' >> tmp/api/chrome.tmp.xml
+echo '<download>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$beta64_dl'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$beta64_dl_alt'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$beta64_dl_cache'</url>' >> tmp/api/chrome.tmp.xml
+echo '</download>' >> tmp/api/chrome.tmp.xml
+echo '<sha256>'$beta64_sha256'</sha256>' >> tmp/api/chrome.tmp.xml
+echo '<size>'$beta64_size_raw'</size>' >> tmp/api/chrome.tmp.xml
+echo '</beta64>' >> tmp/api/chrome.tmp.xml
+
+echo '<dev32>' >> tmp/api/chrome.tmp.xml
+echo '<version>'$dev32_version'</version>' >> tmp/api/chrome.tmp.xml
+echo '<download>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$dev32_dl'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$dev32_dl_alt'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$dev32_dl_cache'</url>' >> tmp/api/chrome.tmp.xml
+echo '</download>' >> tmp/api/chrome.tmp.xml
+echo '<sha256>'$dev32_sha256'</sha256>' >> tmp/api/chrome.tmp.xml
+echo '<size>'$dev32_size_raw'</size>' >> tmp/api/chrome.tmp.xml
+echo '</dev32>' >> tmp/api/chrome.tmp.xml
+
+echo '<dev64>' >> tmp/api/chrome.tmp.xml
+echo '<version>'$dev64_version'</version>' >> tmp/api/chrome.tmp.xml
+echo '<download>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$dev64_dl'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$dev64_dl_alt'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$dev64_dl_cache'</url>' >> tmp/api/chrome.tmp.xml
+echo '</download>' >> tmp/api/chrome.tmp.xml
+echo '<sha256>'$dev64_sha256'</sha256>' >> tmp/api/chrome.tmp.xml
+echo '<size>'$dev64_size_raw'</size>' >> tmp/api/chrome.tmp.xml
+echo '</dev64>' >> tmp/api/chrome.tmp.xml
+
+echo '<canary32>' >> tmp/api/chrome.tmp.xml
+echo '<version>'$canary32_version'</version>' >> tmp/api/chrome.tmp.xml
+echo '<download>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$canary32_dl'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$canary32_dl_alt'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$canary32_dl_cache'</url>' >> tmp/api/chrome.tmp.xml
+echo '</download>' >> tmp/api/chrome.tmp.xml
+echo '<sha256>'$canary32_sha256'</sha256>' >> tmp/api/chrome.tmp.xml
+echo '<size>'$canary32_size_raw'</size>' >> tmp/api/chrome.tmp.xml
+echo '</canary32>' >> tmp/api/chrome.tmp.xml
+
+echo '<canary64>' >> tmp/api/chrome.tmp.xml
+echo '<version>'$canary64_version'</version>' >> tmp/api/chrome.tmp.xml
+echo '<download>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$canary64_dl'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$canary64_dl_alt'</url>' >> tmp/api/chrome.tmp.xml
+echo '<url>'$canary64_dl_cache'</url>' >> tmp/api/chrome.tmp.xml
+echo '</download>' >> tmp/api/chrome.tmp.xml
+echo '<sha256>'$canary64_sha256'</sha256>' >> tmp/api/chrome.tmp.xml
+echo '<size>'$canary64_size_raw'</size>' >> tmp/api/chrome.tmp.xml
+echo '</canary64>' >> tmp/api/chrome.tmp.xml
+
+echo '</chromechecker>' >> tmp/api/chrome.tmp.xml
+
+echo ''
+echo '-------------------------------------'
+echo 'Formatting API Output ......'
+echo '-------------------------------------'
+
+xmllint --format tmp/api/chrome.tmp.xml > tmp/api/chrome.xml
+
+echo ''
+echo '-------------------------------------'
+echo 'Compressing API Output ......'
+echo '-------------------------------------'
+
+xmllint --noblanks tmp/api/chrome.tmp.xml > tmp/api/chrome.min.xml
+
+mkdir public/api/ -p
+
+cp -rf tmp/api/chrome.xml public/api/chrome.xml
+cp -rf tmp/api/chrome.min.xml public/api/chrome.min.xml
