@@ -7,7 +7,7 @@ install:
 script:
   - chmod +x ./checker.sh
   - chmod +x ./combine.sh
-  - chmod +x ./xmlparser.sh
+  - chmod +x ./util/xmlparser.sh
   - chmod +x ./build.sh
   - chmod +x ./deploy.sh
   - ./checker.sh
