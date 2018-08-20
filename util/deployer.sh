@@ -1,3 +1,8 @@
+echo ''
+echo '-------------------------------------'
+echo 'Start Deploying ......'
+echo '-------------------------------------'
+
 mkdir ./_deploy
 cd ./_deploy
 git init
