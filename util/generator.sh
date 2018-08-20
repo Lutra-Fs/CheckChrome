@@ -29,5 +29,5 @@ do
     sed -i "s|{{${i}-dl-main}}|$dl|g" tmp/chrome.xml
     sed -i "s|{{${i}-dl-alternative}}|$dl_alt|g" tmp/chrome.xml
     sed -i "s|{{${i}-dl-cache}}|$dl_cache|g" tmp/chrome.xml
-    sed -i "s|{{${i}-Size}}|$size|g" tmp/chrome.xml
+    sed -i "s|{{${i}-Size}}|$size_raw|g" tmp/chrome.xml
 done
