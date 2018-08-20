@@ -15,8 +15,6 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             </app>
             </request>" > ./tmp/checker/stable-x86.xml
 
-echo ''
-
 sleep 1
 
 echo 'Checking Chrome Stable x64 ......'
@@ -31,8 +29,6 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
                 <updatecheck/>
             </app>
             </request>" > ./tmp/checker/stable-x64.xml
-
-echo ''
 
 sleep 1
 
@@ -49,8 +45,6 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             </app>
             </request>" > ./tmp/checker/beta-x86.xml
 
-echo ''
-
 sleep 1
 
 echo 'Checking Chrome Beta x64 ......'
@@ -65,8 +59,6 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
                 <updatecheck/>
             </app>
             </request>" > ./tmp/checker/beta-x64.xml
-
-echo ''
 
 sleep 1
 
@@ -83,8 +75,6 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             </app>
             </request>" > ./tmp/checker/dev-x86.xml
 
-echo ''
-
 sleep 1
 
 echo 'Checking Chrome Dev x64 ......'
@@ -100,8 +90,6 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             </app>
             </request>" > ./tmp/checker/dev-x64.xml
 
-echo ''
-
 sleep 1
 
 echo 'Checking Chrome Canary x86 ......'
@@ -116,8 +104,6 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
                 <updatecheck/>
             </app>
             </request>" > ./tmp/checker/canary-x86.xml
-
-echo ''
 
 sleep 1
 
