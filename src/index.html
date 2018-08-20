@@ -12,106 +12,7 @@
     <meta name="description" itemprop="description" content="又一个 Chrome 离线包下载">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/suka.css@0.1.2">
-    <style>
-        .sk-shadow-1 {
-            border: 1px solid #eee;
-        }
-
-        .sha-256 {
-            overflow: hidden;
-            user-select: all
-        }
-
-        body {
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-        }
-
-        h1,
-        .h1,
-        h2,
-        .h2,
-        h3,
-        .h3,
-        h4,
-        .h4,
-        h5,
-        .h5,
-        .lead,
-        a,
-        .a,
-        label,
-        option,
-        input,
-        span,
-        select,
-        button,
-        textarea,
-        div {
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif
-        }
-
-        .bs-callout {
-            padding: 16px;
-            margin: 20px 0;
-            border: 1px solid #eee;
-            border-left-width: 5px;
-            border-radius: 3px;
-            word-break: break-all;
-        }
-
-        .bs-callout h4 {
-            margin-top: 0;
-            margin-bottom: 5px;
-        }
-
-        .bs-callout blockquote {
-            font-size: 14px;
-        }
-
-        .bs-callout p:last-child {
-            margin-bottom: 0;
-        }
-
-        .bs-callout code {
-            border-radius: 3px;
-        }
-
-        .bs-callout+.bs-callout {
-            margin-top: -5px;
-        }
-
-        .bs-callout-success {
-            border-left-color: #339933;
-        }
-
-        .bs-callout-success h4 {
-            color: #339933;
-        }
-
-        .bs-callout-danger {
-            border-left-color: #ce4844;
-        }
-
-        .bs-callout-danger h4 {
-            color: #ce4844;
-        }
-
-        .bs-callout-warning {
-            border-left-color: #aa6708;
-        }
-
-        .bs-callout-warning h4 {
-            color: #aa6708;
-        }
-
-        .bs-callout-info {
-            border-left-color: #1b809e;
-        }
-
-        .bs-callout-info h4 {
-            color: #1b809e;
-        }
-    </style>
+    <style>.sk-shadow-1{border:1px solid #eee}.sha-256{overflow:hidden;user-select:all}body{font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif}.a,.h1,.h2,.h3,.h4,.h5,.lead,a,button,div,h1,h2,h3,h4,h5,input,label,option,select,span,textarea{font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",sans-serif}.bs-callout{padding:16px;margin:20px 0;border:1px solid #eee;border-left-width:5px;border-radius:3px;word-break:break-all}.bs-callout h4{margin-top:0;margin-bottom:5px}.bs-callout blockquote{font-size:14px}.bs-callout p:last-child{margin-bottom:0}.bs-callout code{border-radius:3px}.bs-callout+.bs-callout{margin-top:-5px}.bs-callout-success{border-left-color:#393}.bs-callout-success h4{color:#393}.bs-callout-danger{border-left-color:#ce4844}.bs-callout-danger h4{color:#ce4844}.bs-callout-warning{border-left-color:#aa6708}.bs-callout-warning h4{color:#aa6708}.bs-callout-info{border-left-color:#1b809e}.bs-callout-info h4{color:#1b809e}</style>
     <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3"></script><script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script><![endif]-->
     <meta property="og:title" content="Chrome 离线包 - SukkaLab">
     <meta property="og:type" content="Website">
@@ -163,48 +64,48 @@
             <div class="col-sm-6 sk-pt-5">
                 <div class="sk-shadow-1 sk-p-5">
                     <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Stable 稳定版 32 位&nbsp;&nbsp;
-                        <small>{{Stable32-Version}}</small>
+                        <small>{{stable-x86-Version}}</small>
                     </h4>
                     <hr class="sk-mt-0 sk-mb-3">
                     <p class="sk-mb-1">
                         <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>{{Stable32-Size}}</code>
+                        <code>{{stable-x86-Size}}</code>
                     </p>
                     <p>
                         <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{Stable32-SHA256}}</pre>
+                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{stable-x86-SHA256}}</pre>
                     </p>
                     <div class="btn-group sk-mt-3" role="group">
-                        <a href="{{Stable32-dl-main}}" class="btn btn-success">
+                        <a href="{{stable-x86-dl-main}}" class="btn btn-success">
                             <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
                             <span>点击下载</span>
                         </a>
-                        <a href="{{Stable32-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="{{Stable32-dl-cache}}" class="btn btn-default">缓存服务器</a>
+                        <a href="{{stable-x86-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
+                        <a href="{{stable-x86-dl-cache}}" class="btn btn-default">缓存服务器</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 sk-pt-5">
                 <div class="sk-shadow-1 sk-p-5">
                     <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Stable 稳定版 64 位&nbsp;&nbsp;
-                        <small>{{Stable64-Version}}</small>
+                        <small>{{stable-x64-Version}}</small>
                     </h4>
                     <hr class="sk-mt-0 sk-mb-3">
                     <p class="sk-mb-1">
                         <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>{{Stable64-Size}}</code>
+                        <code>{{stable-x64-Size}}</code>
                     </p>
                     <p>
                         <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{Stable64-SHA256}}</pre>
+                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{stable-x64-SHA256}}</pre>
                     </p>
                     <div class="btn-group sk-mt-3" role="group">
-                        <a href="{{Stable64-dl-main}}" class="btn btn-success">
+                        <a href="{{stable-x64-dl-main}}" class="btn btn-success">
                             <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
                             <span>点击下载</span>
                         </a>
-                        <a href="{{Stable64-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="{{Stable64-dl-cache}}" class="btn btn-default">缓存服务器</a>
+                        <a href="{{stable-x64-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
+                        <a href="{{stable-x64-dl-cache}}" class="btn btn-default">缓存服务器</a>
                     </div>
                 </div>
             </div>
@@ -213,48 +114,48 @@
             <div class="col-sm-6 sk-pt-5">
                 <div class="sk-shadow-1 sk-p-5">
                     <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Beta 测试版 32 位&nbsp;&nbsp;
-                        <small>{{Beta32-Version}}</small>
+                        <small>{{beta-x86-Version}}</small>
                     </h4>
                     <hr class="sk-mt-0 sk-mb-3">
                     <p class="sk-mb-1">
                         <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>{{Beta32-Size}}</code>
+                        <code>{{beta-x86-Size}}</code>
                     </p>
                     <p>
                         <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{Beta32-SHA256}}</pre>
+                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{beta-x86-SHA256}}</pre>
                     </p>
                     <div class="btn-group sk-mt-3" role="group">
-                        <a href="{{Beta32-dl-main}}" class="btn btn-primary">
+                        <a href="{{beta-x86-dl-main}}" class="btn btn-primary">
                             <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
                             <span>点击下载</span>
                         </a>
-                        <a href="{{Beta32-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="{{Beta32-dl-cache}}" class="btn btn-default">缓存服务器</a>
+                        <a href="{{beta-x86-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
+                        <a href="{{beta-x86-dl-cache}}" class="btn btn-default">缓存服务器</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 sk-pt-5">
                 <div class="sk-shadow-1 sk-p-5">
                     <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Beta 测试版 64 位&nbsp;&nbsp;
-                        <small>{{Beta64-Version}}</small>
+                        <small>{{beta-x64-Version}}</small>
                     </h4>
                     <hr class="sk-mt-0 sk-mb-3">
                     <p class="sk-mb-1">
                         <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>{{Beta64-Size}}</code>
+                        <code>{{beta-x64-Size}}</code>
                     </p>
                     <p>
                         <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{Beta64-SHA256}}</pre>
+                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{beta-x64-SHA256}}</pre>
                     </p>
                     <div class="btn-group sk-mt-3" role="group">
-                        <a href="{{Beta64-dl-main}}" class="btn btn-primary">
+                        <a href="{{beta-x64-dl-main}}" class="btn btn-primary">
                             <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
                             <span>点击下载</span>
                         </a>
-                        <a href="{{Beta64-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="{{Beta64-dl-cache}}" class="btn btn-default">缓存服务器</a>
+                        <a href="{{beta-x64-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
+                        <a href="{{beta-x64-dl-cache}}" class="btn btn-default">缓存服务器</a>
                     </div>
                 </div>
             </div>
@@ -263,48 +164,48 @@
             <div class="col-sm-6 sk-pt-5">
                 <div class="sk-shadow-1 sk-p-5">
                     <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Dev 开发版 32 位&nbsp;&nbsp;
-                        <small>{{Dev32-Version}}</small>
+                        <small>{{dev-x86-Version}}</small>
                     </h4>
                     <hr class="sk-mt-0 sk-mb-3">
                     <p class="sk-mb-1">
                         <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>{{Dev32-Size}}</code>
+                        <code>{{dev-x86-Size}}</code>
                     </p>
                     <p>
                         <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{Dev32-SHA256}}</pre>
+                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{dev-x86-SHA256}}</pre>
                     </p>
                     <div class="btn-group sk-mt-3" role="group">
-                        <a href="{{Dev32-dl-main}}" class="btn btn-warning">
+                        <a href="{{dev-x86-dl-main}}" class="btn btn-warning">
                             <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
                             <span>点击下载</span>
                         </a>
-                        <a href="{{Dev32-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="{{Dev32-dl-cache}}" class="btn btn-default">缓存服务器</a>
+                        <a href="{{dev-x86-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
+                        <a href="{{dev-x86-dl-cache}}" class="btn btn-default">缓存服务器</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 sk-pt-5">
                 <div class="sk-shadow-1 sk-p-5">
                     <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Dev 开发版 64 位&nbsp;&nbsp;
-                        <small>{{Dev64-Version}}</small>
+                        <small>{{dev-x64-Version}}</small>
                     </h4>
                     <hr class="sk-mt-0 sk-mb-3">
                     <p class="sk-mb-1">
                         <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>{{Dev64-Size}}</code>
+                        <code>{{dev-x64-Size}}</code>
                     </p>
                     <p>
                         <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{Dev64-SHA256}}</pre>
+                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{dev-x64-SHA256}}</pre>
                     </p>
                     <div class="btn-group sk-mt-3" role="group">
-                        <a href="{{Dev64-dl-main}}" class="btn btn-warning">
+                        <a href="{{dev-x64-dl-main}}" class="btn btn-warning">
                             <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
                             <span>点击下载</span>
                         </a>
-                        <a href="{{Dev64-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="{{Dev64-dl-cache}}" class="btn btn-default">缓存服务器</a>
+                        <a href="{{dev-x64-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
+                        <a href="{{dev-x64-dl-cache}}" class="btn btn-default">缓存服务器</a>
                     </div>
                 </div>
             </div>
@@ -313,48 +214,48 @@
             <div class="col-sm-6 sk-pt-5">
                 <div class="sk-shadow-1 sk-p-5">
                     <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Canary 金丝雀 32 位&nbsp;&nbsp;
-                        <small>{{Canary32-Version}}</small>
+                        <small>{{canary-x86-Version}}</small>
                     </h4>
                     <hr class="sk-mt-0 sk-mb-3">
                     <p class="sk-mb-1">
                         <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>{{Canary32-Size}}</code>
+                        <code>{{canary-x86-Size}}</code>
                     </p>
                     <p>
                         <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{Canary32-SHA256}}</pre>
+                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{canary-x86-SHA256}}</pre>
                     </p>
                     <div class="btn-group sk-mt-3" role="group">
-                        <a href="{{Canary32-dl-main}}" class="btn btn-danger">
+                        <a href="{{canary-x86-dl-main}}" class="btn btn-danger">
                             <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
                             <span>点击下载</span>
                         </a>
-                        <a href="{{Canary32-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="{{Canary32-dl-cache}}" class="btn btn-default">缓存服务器</a>
+                        <a href="{{canary-x86-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
+                        <a href="{{canary-x86-dl-cache}}" class="btn btn-default">缓存服务器</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 sk-pt-5">
                 <div class="sk-shadow-1 sk-p-5">
                     <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Canary 金丝雀 64 位&nbsp;&nbsp;
-                        <small>{{Canary64-Version}}</small>
+                        <small>{{canary-x64-Version}}</small>
                     </h4>
                     <hr class="sk-mt-0 sk-mb-3">
                     <p class="sk-mb-1">
                         <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>{{Canary64-Size}}</code>
+                        <code>{{canary-x64-Size}}</code>
                     </p>
                     <p>
                         <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{Canary64-SHA256}}</pre>
+                        <pre class="sk-p-1 sk-text-uppercase sha-256">{{canary-x64-SHA256}}</pre>
                     </p>
                     <div class="btn-group sk-mt-3" role="group">
-                        <a href="{{Canary64-dl-main}}" class="btn btn-danger">
+                        <a href="{{canary-x64-dl-main}}" class="btn btn-danger">
                             <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
                             <span>点击下载</span>
                         </a>
-                        <a href="{{Canary64-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="{{Canary64-dl-cache}}" class="btn btn-default">缓存服务器</a>
+                        <a href="{{canary-x64-dl-alternative}}" class="btn btn-default sk-bg-gray">备选地址</a>
+                        <a href="{{canary-x64-dl-cache}}" class="btn btn-default">缓存服务器</a>
                     </div>
                 </div>
             </div>
