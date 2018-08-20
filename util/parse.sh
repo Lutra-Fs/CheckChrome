@@ -15,9 +15,9 @@ do
     sed -i 's|https://||g' ./tmp/parse/${i}.info
     sed -i 's| ||g' ./tmp/parse/${i}.info
 
-    sed -n '8p' ./tmp/parse/${i}.info > ./tmp/parse/${i}-result.info
+    sed -n '14p' ./tmp/parse/${i}.info > ./tmp/parse/${i}-result.info
+    sed -n '8p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
     sed -n '10p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
-    sed -n '14p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
     sed -n '23p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
     sed -n '22p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
     sed -n '24p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info

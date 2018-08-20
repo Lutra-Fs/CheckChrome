@@ -124,5 +124,5 @@ read_xml() {
         :
     done < "$1"
 }  
-  
+
 read_xml "$1"
