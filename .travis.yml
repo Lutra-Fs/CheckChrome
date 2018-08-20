@@ -5,13 +5,5 @@ dist: trusty
 install:
   - sudo apt-get --yes install libxml2-utils
 script:
-  - chmod +x ./checker.sh
-  - chmod +x ./combine.sh
-  - chmod +x ./xmlparser.sh
-  - chmod +x ./build.sh
-  - chmod +x ./deploy.sh
-  - ./checker.sh
-  - ./combine.sh
-  - ./xmlparser.sh tmp/chrome.xml > tmp/chrome_xml_parser_result.txt
-  - ./build.sh
-  - ./deploy.sh > /dev/null
+  - chmod +x ./run.sh
+  - ./run.sh
