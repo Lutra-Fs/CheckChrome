@@ -2,13 +2,13 @@
 
 🌐 Yet another chrome offline package download page generator.
 
-[![Author](https://img.shields.io/badge/Author-Sukka-b68469.svg?style=flat-square)](https://suka.moe)
+[![Author](https://img.shields.io/badge/Author-Sukka-b68469.svg?style=flat-square)](https://skk.moe)
 [![Build Status](https://img.shields.io/travis/SukkaW/CheckChrome.svg?style=flat-square)](https://travis-ci.org/SukkaW/CheckChrome)
 [![License](https://img.shields.io/github/license/sukkaw/CheckChrome.svg?style=flat-square)](./LICENSE)
 
 ## Demo
 
-https://lab.suka.moe/chrome
+https://lab.skk.moe/chrome
 
 ## API for CheckChrome
 
@@ -17,13 +17,13 @@ XML Format Output
 ### Not compressed (For development)
 
 ```
-GET https://lab.suka.moe/chrome/api/chrome.xml
+GET https://lab.skk.moe/chrome/api/chrome.xml
 ```
 
 ### Compressed (For production)
 
 ```
-GET https://lab.suka.moe/chrome/api/chrome.min.xml
+GET https://lab.skk.moe/chrome/api/chrome.min.xml
 ```
 
 ## Advanced - Google Updater (Omaha) API
@@ -76,7 +76,7 @@ Canary
 
 **CheckChrome** © [Sukka](https://github.com/SukkaW), Released under the [GPL-3.0](./LICENSE) License.
 
-> [Personal Website](https://suka.moe) · [Blog](https://blog.suka.moe) · GitHub [@SukkaW](https://github.com/SukkaW) · Telegram Channel [@SukkaChannel](https://t.me/SukkaChannel)
+> [Personal Website](https://skk.moe) · [Blog](https://blog.skk.moe) · GitHub [@SukkaW](https://github.com/SukkaW) · Telegram Channel [@SukkaChannel](https://t.me/SukkaChannel)
 
 ## Render
 
