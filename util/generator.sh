@@ -5,7 +5,7 @@ echo '-------------------------------------'
 
 for i in $@
 do
-    cache="http://101.96.10.72/"
+    cache="http://101.96.9.133/"
     version=$(sed -n '1p' ./tmp/parse/${i}-result.info)
     dl_base=$(sed -n '2p' ./tmp/parse/${i}-result.info)
     dl_alt_base=$(sed -n '3p' ./tmp/parse/${i}-result.info)
