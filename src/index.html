@@ -12,7 +12,7 @@
     <meta name="description" itemprop="description" content="又一个 Chrome 离线包下载">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/suka.css@0.1.2">
-    <style>.sk-shadow-1{border:1px solid #eee}.sha-256{overflow:hidden;user-select:all}body{font-family:-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,sans-serif}.a,.h1,.h2,.h3,.h4,.h5,.lead,a,button,div,h1,h2,h3,h4,h5,input,label,option,select,span,textarea{font-family:-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,sans-serif}.bs-callout{padding:1pc;margin:20px 0;border:1px solid #eee;border-left-width:5px;border-radius:3px;word-break:break-all}.bs-callout h4{margin-top:0;margin-bottom:5px}.bs-callout blockquote{font-size:14px}.bs-callout p:last-child{margin-bottom:0}.bs-callout code{border-radius:3px}.bs-callout+.bs-callout{margin-top:-5px}.bs-callout-success{border-left-color:#393}.bs-callout-success h4{color:#393}.bs-callout-danger{border-left-color:#ce4844}.bs-callout-danger h4{color:#ce4844}.bs-callout-warning{border-left-color:#aa6708}.bs-callout-warning h4{color:#aa6708}.bs-callout-info{border-left-color:#1b809e}.bs-callout-info h4{color:#1b809e}    </style>
+    <style>.sk-shadow-1{border:1px solid #eee}.sha-256{overflow:hidden;user-select:all}body{font-family:-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,sans-serif}.a,.h1,.h2,.h3,.h4,.h5,.lead,a,button,div,h1,h2,h3,h4,h5,input,label,option,select,span,textarea{font-family:-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,sans-serif}.bs-callout{margin:20px 0;padding:1pc;border:1px solid #eee;border-radius:3px;border-left-width:5px;word-break:break-all}.bs-callout h4{margin-top:0;margin-bottom:5px}.bs-callout blockquote{font-size:14px}.bs-callout p:last-child{margin-bottom:0}.bs-callout code{border-radius:3px}.bs-callout+.bs-callout{margin-top:-5px}.bs-callout-success{border-left-color:#393}.bs-callout-success h4{color:#393}.bs-callout-danger{border-left-color:#ce4844}.bs-callout-danger h4{color:#ce4844}.bs-callout-warning{border-left-color:#aa6708}.bs-callout-warning h4{color:#aa6708}.bs-callout-info{border-left-color:#1b809e}.bs-callout-info h4{color:#1b809e}</style>
     <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3"></script><script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script><![endif]-->
     <meta property="og:title" content="Chrome 离线包 - SukkaLab">
     <meta property="og:type" content="Website">
@@ -264,7 +264,21 @@
         window.ga_url = "https://ga.giuem.com";
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@giuem/ga-proxy" async></script>
-    <script async src="https://rum.perfops.net/rum3.min.js"></script>
+    <script>
+        (function () {
+            function perfops() {
+                var js = document.createElement('script');
+                js.src = 'https://rum.perfops.net/rum3.min.js';
+                document.body.appendChild(js);
+            }
+
+            if (document.readyState === 'complete') {
+                perfops();
+            } else {
+                window.addEventListener('load', perfops);
+            }
+        })();
+    </script>
 </body>
 
 </html>
