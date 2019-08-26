@@ -8,7 +8,7 @@
 
 ## Demo
 
-https://lab.skk.moe/chrome
+https://chrome-dl.com
 
 ## API for CheckChrome
 
@@ -17,13 +17,13 @@ XML Format Output
 ### Not compressed (For development)
 
 ```
-GET https://lab.skk.moe/chrome/api/chrome.xml
+GET https://chrome-dl.com/api/chrome.xml
 ```
 
 ### Compressed (For production)
 
 ```
-GET https://lab.skk.moe/chrome/api/chrome.min.xml
+GET https://chrome-dl.com/api/chrome.min.xml
 ```
 
 ## Advanced - Google Updater (Omaha) API

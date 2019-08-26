@@ -5,6 +5,9 @@ echo '-------------------------------------'
 
 mkdir ./_deploy
 cd ./_deploy
+touch CNAME
+echo 'chrome-dl.com' > CNAME
+
 git init
 git config --global push.default matching
 git config --global user.email "${GitHubEMail}"

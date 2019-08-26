@@ -4,9 +4,9 @@ node_js:
 sudo: enabled
 dist: xenial
 install:
-  - curl -L https://noc.one/ubuntu | bash
-  - sudo apt update
-  - sudo apt -y install libxml2-utils
+  - sudo apt-get clean
+  - sudo apt-get update
+  - sudo apt-get -y install libxml2-utils
 script:
   - chmod +x ./run.sh
   - ./run.sh
