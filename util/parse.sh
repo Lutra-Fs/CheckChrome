@@ -36,7 +36,7 @@ do
     #echo $URLBASE1  >> ./tmp/parse/${i}-result.info
     sudo xmllint --xpath "string(/response/app/updatecheck/urls/url[starts-with(@codebase,'https://redirector.gvt1.com')]/@codebase)" ./tmp/checker/${i}.xml >> ./tmp/parse/${i}-result.info
     #echo $URLBASE2 >> ./tmp/parse/${i}-result.info
-    sudo xmllint --xpath "string(/response/app/updatecheck/urls/url[starts-with(@codebase,'https://dl.google.com')]/@codebase)" ./tmp/checker/${i}.xml >> ./tmp/parse/${i}-result.info
+    sudo xmllint --xpath "string(/response/app/updatecheck/urls/url[starts-with(@codebase,'https://www.google.com')]/@codebase)" ./tmp/checker/${i}.xml >> ./tmp/parse/${i}-result.info
     echo $INSTALLER  >> ./tmp/parse/${i}-result.info
     echo $SHA256  >> ./tmp/parse/${i}-result.info
     echo $SIZE  >> ./tmp/parse/${i}-result.info
