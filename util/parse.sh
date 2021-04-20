@@ -40,4 +40,6 @@ do
     echo $INSTALLER  >> ./tmp/parse/${i}-result.info
     echo $SHA256  >> ./tmp/parse/${i}-result.info
     echo $SIZE  >> ./tmp/parse/${i}-result.info
+    cat ./tmp/parse/${i}-result.info
+    sleep 10000
 done
