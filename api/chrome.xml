@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2021-04-24 18:04:05</time>
+  <time>2021-04-25 18:04:37</time>
   <stable32>
     <version>90.0.4430.85</version>
     <download>
@@ -47,22 +47,22 @@
     <size>74363776</size>
   </dev32>
   <dev64>
-    <version>92.0.4484.3</version>
+    <version>92.0.4484.7</version>
     <download>
-      <url>https://redirector.gvt1.com/edgedl/release2/chrome/SOl4oiDEwKfhbz6b--yS1w_92.0.4484.3/92.0.4484.3_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/SOl4oiDEwKfhbz6b--yS1w_92.0.4484.3/92.0.4484.3_chrome_installer.exe</url>
+      <url>https://redirector.gvt1.com/edgedl/release2/chrome/VLD1ViIDb8fTxmKxhklywQ_92.0.4484.7/92.0.4484.7_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/VLD1ViIDb8fTxmKxhklywQ_92.0.4484.7/92.0.4484.7_chrome_installer.exe</url>
     </download>
-    <sha256>073a4f920875407f091fdb5a7071dcddcaa3e93f3d98e2153f5dda2ba550ffea</sha256>
-    <size>76855680</size>
+    <sha256>8ae56d654ac3211cb22b0b801f466fa18be405ec7668c1e9b9f34d55d133101c</sha256>
+    <size>77004152</size>
   </dev64>
   <canary32>
-    <version>92.0.4487.0</version>
+    <version>92.0.4487.1</version>
     <download>
-      <url>https://redirector.gvt1.com/edgedl/release2/chrome/Xi5v5GoFrQ4sMGsmlHhImA_92.0.4487.0/92.0.4487.0_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/Xi5v5GoFrQ4sMGsmlHhImA_92.0.4487.0/92.0.4487.0_chrome_installer.exe</url>
+      <url>https://redirector.gvt1.com/edgedl/release2/chrome/AMReWXumGJwYqNX184DcUYo_92.0.4487.1/92.0.4487.1_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/AMReWXumGJwYqNX184DcUYo_92.0.4487.1/92.0.4487.1_chrome_installer.exe</url>
     </download>
-    <sha256>3380ea4b7f3455774c699eeb06719b2ce8c89105a680245141e5ade737dbd650</sha256>
-    <size>74417024</size>
+    <sha256>9a230b53a37b765db7aa912107b3070f6102a5c47e88403f55dd13997f41c47e</sha256>
+    <size>92553088</size>
   </canary32>
   <canary64>
     <version>92.0.4487.0</version>
