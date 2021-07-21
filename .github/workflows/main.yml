@@ -21,15 +21,11 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    
-    
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - with: 
-          GH_PAT: ${{ secrets.ACCESS_TOKEN }}
       - name: Install xmllint
         run: sudo apt-get install libxml2-utils
       - name: Run a multi-line script
@@ -42,6 +38,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
           build_dir: ./public
+          GH_PAT: ${{ secrets.ACCESS_TOKEN }}
 
 
   
