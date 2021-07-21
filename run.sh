@@ -29,4 +29,3 @@ cp -rf tmp/index.html public/index.html
 cp -rf tmp/api/chrome.xml public/api/chrome.xml
 cp -rf tmp/api/chrome.min.xml public/api/chrome.min.xml
 
-./util/deployer.sh
