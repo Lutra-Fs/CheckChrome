@@ -32,17 +32,19 @@ jobs:
         run: |
           chmod +x ./run.sh
           ./run.sh
-      - name: GitHub Pages
-      # You may pin to the exact commit or the version.
-      # uses: crazy-max/ghaction-github-pages@db4476a01402e1a7ce05f41832040eef16d14925
-        uses: crazy-max/ghaction-github-pages@v2.5.0
-        env:
-          GH_PAT: ${{ secrets.ACCESS_TOKEN }}
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          BUILD_DIR: ./public/
-        
-          
+          branch: gh-pages
+          # The folder in your repository that you want to deploy. If your build script compiles into a directory named build you would put it here. Folder paths cannot have a leading / or ./. If you wish to deploy the root directory you can place a . here.
+          folder: ./public/
+          # If you would like to push the contents of the deployment folder into a specific directory on the deployment branch you can specify it here.
 
 
 
-  
+
+
+
+
+
+
