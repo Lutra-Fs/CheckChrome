@@ -39,7 +39,7 @@ jobs:
         with:
           BUILD_DIR: ./public/
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_PAT: ${{ secrets.ACCESS_TOKEN }}
           
 
 
