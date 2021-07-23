@@ -5,6 +5,11 @@
 [![Author](https://img.shields.io/badge/Author-Sukka-b68469.svg?style=flat-square)](https://skk.moe)
 [![Build Status](https://img.shields.io/travis/SukkaW/CheckChrome.svg?style=flat-square)](https://travis-ci.org/Lutra-Fs/CheckChrome)
 [![License](https://img.shields.io/github/license/sukkaw/CheckChrome.svg?style=flat-square)](./LICENSE)
+[![Revisor](https://lutra-fs.github.io/CheckChrome/)](./LICENSE)
+
+## Fixed version
+
+https://lutra-fs.github.io/CheckChrome
 
 ## Demo
 
@@ -77,6 +82,10 @@ Canary
 **CheckChrome** © [Sukka](https://github.com/SukkaW), Released under the [GPL-3.0](./LICENSE) License.
 
 > [Personal Website](https://skk.moe) · [Blog](https://blog.skk.moe) · GitHub [@SukkaW](https://github.com/SukkaW) · Telegram Channel [@SukkaChannel](https://t.me/SukkaChannel)
+
+## Fixed version reviser
+**CheckChrome** © [Lutra-Fs](https://github.com/Lutra-Fs), Released under the [GPL-3.0](./LICENSE) License.
+> GitHub [@Lutra-Fs](https://github.com/Lutra-Fs)
 
 ## Render
 
