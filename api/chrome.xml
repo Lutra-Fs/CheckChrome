@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2021-07-26 13:33:30</time>
+  <time>2021-07-27 13:33:32</time>
   <stable32>
     <version>92.0.4515.107</version>
     <download>
@@ -65,12 +65,12 @@
     <size>76227688</size>
   </canary32>
   <canary64>
-    <version>94.0.4587.0</version>
+    <version>94.0.4588.0</version>
     <download>
-      <url>https://redirector.gvt1.com/edgedl/release2/chrome/adqkjybj6jvi74tnjtria72aplfq_94.0.4587.0/94.0.4587.0_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/adqkjybj6jvi74tnjtria72aplfq_94.0.4587.0/94.0.4587.0_chrome_installer.exe</url>
+      <url>https://redirector.gvt1.com/edgedl/release2/chrome/b3hf5s76b45nfnjyw43yk44xh4_94.0.4588.0/94.0.4588.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/b3hf5s76b45nfnjyw43yk44xh4_94.0.4588.0/94.0.4588.0_chrome_installer.exe</url>
     </download>
-    <sha256>371017f6ebf1bb6eb5cd0bc4d6f772515e4f63729e4971ca2060f483260e7b05</sha256>
-    <size>79006824</size>
+    <sha256>228f0dc564904425a03048bef27c68d43e421632efd8787f2ae9347f1f3cf632</sha256>
+    <size>79092328</size>
   </canary64>
 </chromechecker>
