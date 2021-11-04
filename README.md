@@ -2,9 +2,8 @@
 
 🌐 Yet another chrome offline package download page generator.
 
-[![Author](https://img.shields.io/badge/Author-Sukka-b68469.svg?style=flat-square)](https://skk.moe)
 [![Build Status](https://img.shields.io/travis/SukkaW/CheckChrome.svg?style=flat-square)](https://travis-ci.org/Lutra-Fs/CheckChrome)
-[![License](https://img.shields.io/github/license/sukkaw/CheckChrome.svg?style=flat-square)](./LICENSE)
+[![License](https://img.shields.io/github/license/Lutra-Fs/CheckChrome.svg?style=flat-square)](./LICENSE)
 
 
 ## Fixed version
