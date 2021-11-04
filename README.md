@@ -5,15 +5,12 @@
 [![Author](https://img.shields.io/badge/Author-Sukka-b68469.svg?style=flat-square)](https://skk.moe)
 [![Build Status](https://img.shields.io/travis/SukkaW/CheckChrome.svg?style=flat-square)](https://travis-ci.org/Lutra-Fs/CheckChrome)
 [![License](https://img.shields.io/github/license/sukkaw/CheckChrome.svg?style=flat-square)](./LICENSE)
-[![Revisor](https://lutra-fs.github.io/CheckChrome/)](./LICENSE)
+
 
 ## Fixed version
 
 https://lutra-fs.github.io/CheckChrome
 
-## Demo
-
-https://chrome-dl.com
 
 ## API for CheckChrome
 
@@ -22,13 +19,13 @@ XML Format Output
 ### Not compressed (For development)
 
 ```
-GET https://chrome-dl.com/api/chrome.xml
+GET https://lutra-fs.github.io/CheckChrome/api/chrome.xml
 ```
 
 ### Compressed (For production)
 
 ```
-GET https://chrome-dl.com/api/chrome.min.xml
+GET https://lutra-fs.github.io/CheckChrome/api/chrome.min.xml
 ```
 
 ## Advanced - Google Updater (Omaha) API
