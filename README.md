@@ -2,7 +2,6 @@
 
 🌐 Yet another chrome offline package download page generator.
 
-[![Build Status](https://img.shields.io/travis/SukkaW/CheckChrome.svg?style=flat-square)](https://travis-ci.org/Lutra-Fs/CheckChrome)
 [![License](https://img.shields.io/github/license/Lutra-Fs/CheckChrome.svg?style=flat-square)](./LICENSE)
 
 
