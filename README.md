@@ -1,6 +1,8 @@
-# CheckChrome
+# UpdateTracker
 
-🌐 Yet another chrome offline package download page generator.
+(Work In Progress) Update checker for Google Chrome and some other packages.
+
+- offline package download page generator
 
 [![License](https://img.shields.io/github/license/Lutra-Fs/CheckChrome.svg?style=flat-square)](./LICENSE)
 
