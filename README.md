@@ -1,6 +1,8 @@
-# UpdateTracker
+# (Work In Progress) UpdateTracker
 
-(Work In Progress) Update checker for Google Chrome and some other packages.
+Update tracker for Google Chrome and some other packages.
+
+Including:
 
 - offline package download page generator
 
