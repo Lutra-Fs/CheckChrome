@@ -1,3 +1,4 @@
+cd
 mkdir ./googlechrome/public/api -p
 mkdir ./googlechrome/tmp/checker -p
 mkdir ./googlechrome/tmp/parse -p
