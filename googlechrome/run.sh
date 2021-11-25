@@ -5,10 +5,8 @@ mkdir ./googlechrome/tmp/parse -p
 mkdir ./googlechrome/tmp/api/
 
 chmod +x ./googlechrome/util/checker.sh
-chmod +x ./googlechrome/util/xmlparser.sh
 chmod +x ./googlechrome/util/parse.sh
 chmod +x ./googlechrome/util/generator.sh
-chmod +x ./googlechrome/util/deployer.sh
 
 ./googlechrome/util/checker.sh
 
