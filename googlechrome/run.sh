@@ -1,4 +1,4 @@
-mkdir /public/api -p
+mkdir ./public/api -p
 mkdir ./googlechrome/tmp/checker -p
 mkdir ./googlechrome/tmp/parse -p
 mkdir ./googlechrome/tmp/api/
@@ -21,5 +21,5 @@ sed -i "s|{{CheckTime}}|$DATE|g" googlechrome/tmp/chrome.xml
 xmllint --format googlechrome/tmp/chrome.xml > googlechrome/tmp/api/chrome.xml
 xmllint --noblanks googlechrome/tmp/chrome.xml > googlechrome/tmp/api/chrome.min.xml
 
-cp -rf googlechrome/tmp/api/chrome.xml /public/api/chrome.xml
-cp -rf googlechrome/tmp/api/chrome.min.xml /public/api/chrome.min.xml
+cp -rf googlechrome/tmp/api/chrome.xml ./public/api/chrome.xml
+cp -rf googlechrome/tmp/api/chrome.min.xml ./public/api/chrome.min.xml
