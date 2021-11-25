@@ -21,5 +21,5 @@ sed -i "s|{{CheckTime}}|$DATE|g" googlechrome/tmp/chrome.xml
 xmllint --format googlechrome/tmp/chrome.xml > googlechrome/tmp/api/chrome.xml
 xmllint --noblanks googlechrome/tmp/chrome.xml > googlechrome/tmp/api/chrome.min.xml
 
-cp -rf googlechrome/tmp/api/chrome.xml ./googlechrome//api/chrome.xml
-cp -rf googlechrome/tmp/api/chrome.min.xml ./googlechrome//api/chrome.min.xml
+cp -rf googlechrome/tmp/api/chrome.xml ./googlechrome/api/chrome.xml
+cp -rf googlechrome/tmp/api/chrome.min.xml ./googlechrome/api/chrome.min.xml
