@@ -3,10 +3,7 @@ echo '-------------------------------------'
 echo 'Parsing data ......'
 echo '-------------------------------------'
 
-# 2nd and later arguments
-echo ${@:2}
-
-for i in $@
+for i in ${@:2} # 2nd and later arguments
 do
     echo 'Parsing '${i}' data ......'
 
