@@ -2,6 +2,13 @@ echo '-------------------------------------'
 echo 'Start Checking Chrome ......'
 echo '-------------------------------------'
 
+# Google Updater (Omaha) API
+# App IDs:
+# Stable: 8A69D345-D564-463C-AFF1-A69D9E530F96
+# Beta: 8A69D345-D564-463C-AFF1-A69D9E530F96
+# Dev: 8A69D345-D564-463C-AFF1-A69D9E530F96
+# Canary: 4EA16AC7-FD5A-47C3-875B-DBF4A2008C20
+
 echo 'Checking Chrome Stable x86 ......'
 
 curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' encoding='UTF-8'?>
