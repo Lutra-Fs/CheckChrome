@@ -2,6 +2,13 @@ echo '-------------------------------------'
 echo 'Start Checking Chrome ......'
 echo '-------------------------------------'
 
+# Google Updater (Omaha) API
+# App IDs:
+# Stable: 8A69D345-D564-463C-AFF1-A69D9E530F96
+# Beta: 8A69D345-D564-463C-AFF1-A69D9E530F96
+# Dev: 8A69D345-D564-463C-AFF1-A69D9E530F96
+# Canary: 4EA16AC7-FD5A-47C3-875B-DBF4A2008C20
+
 echo 'Checking Chrome Stable x86 ......'
 
 curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' encoding='UTF-8'?>
@@ -13,7 +20,7 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             <app appid='{8A69D345-D564-463C-AFF1-A69D9E530F96}' ap='-multi-chrome' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > ./tmp/checker/stable-x86.xml
+            </request>" > $1/checker/stable-x86.xml
 
 sleep 1
 
@@ -28,7 +35,7 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             <app appid='{8A69D345-D564-463C-AFF1-A69D9E530F96}' ap='x64-stable-multi-chrome' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > ./tmp/checker/stable-x64.xml
+            </request>" > $1/checker/stable-x64.xml
 
 sleep 1
 
@@ -43,7 +50,7 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             <app appid='{8A69D345-D564-463C-AFF1-A69D9E530F96}' ap='1.1-beta' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > ./tmp/checker/beta-x86.xml
+            </request>" > $1/checker/beta-x86.xml
 
 sleep 1
 
@@ -58,7 +65,7 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             <app appid='{8A69D345-D564-463C-AFF1-A69D9E530F96}' ap='x64-beta-multi-chrome' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > ./tmp/checker/beta-x64.xml
+            </request>" > $1/checker/beta-x64.xml
 
 sleep 1
 
@@ -73,7 +80,7 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             <app appid='{8A69D345-D564-463C-AFF1-A69D9E530F96}' ap='2.0-dev' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > ./tmp/checker/dev-x86.xml
+            </request>" > $1/checker/dev-x86.xml
 
 sleep 1
 
@@ -88,7 +95,7 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             <app appid='{8A69D345-D564-463C-AFF1-A69D9E530F96}' ap='x64-dev-multi-chrome' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > ./tmp/checker/dev-x64.xml
+            </request>" > $1/checker/dev-x64.xml
 
 sleep 1
 
@@ -103,7 +110,7 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             <app appid='{4EA16AC7-FD5A-47C3-875B-DBF4A2008C20}' ap='' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > ./tmp/checker/canary-x86.xml
+            </request>" > $1/checker/canary-x86.xml
 
 sleep 1
 
@@ -118,4 +125,4 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             <app appid='{4EA16AC7-FD5A-47C3-875B-DBF4A2008C20}' ap='x64-canary' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > ./tmp/checker/canary-x64.xml
+            </request>" > $1/checker/canary-x64.xml
