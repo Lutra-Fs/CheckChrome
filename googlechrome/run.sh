@@ -8,7 +8,7 @@ chmod +x ./googlechrome/util/generator.sh
 
 ./googlechrome/util/checker.sh "./googlechrome/tmp"
 
-./googlechrome/util/parse.sh stable-x86 stable-x64 beta-x86 beta-x64 dev-x86 dev-x64 canary-x86 canary-x64
+./googlechrome/util/parse.sh "./googlechrome/tmp" stable-x86 stable-x64 beta-x86 beta-x64 dev-x86 dev-x64 canary-x86 canary-x64
 
 cp -rf ./googlechrome/src/chrome.xml ./googlechrome/tmp/chrome.xml
 
