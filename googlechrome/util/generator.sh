@@ -5,7 +5,6 @@ echo '-------------------------------------'
 
 for i in ${@:2} # 2nd and later arguments
 do
-    cache="http://101.96.9.133/"
     version=$(sed -n '1p' $1/parse/${i}-result.info)
     dl_base=$(sed -n '2p' $1/parse/${i}-result.info)
     dl_alt_base=$(sed -n '3p' $1/parse/${i}-result.info)
