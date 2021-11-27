@@ -14,8 +14,6 @@ cp -rf ./googlechrome/src/chrome.xml ./googlechrome/tmp/chrome.xml
 
 DATE="$(echo $(TZ=UTC-8 date '+%Y-%m-%d %H:%M:%S'))"
 sed -i "s|{{CheckTime}}|$DATE|g" googlechrome/tmp/chrome.xml
-echo "[DEBUG] content of chrome.xml:"
-cat ./googlechrome/tmp/chrome.xml
 
 ./googlechrome/util/generator.sh stable-x86 stable-x64 beta-x86 beta-x64 dev-x86 dev-x64 canary-x86 canary-x64
 

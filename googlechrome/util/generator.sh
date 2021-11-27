@@ -5,6 +5,7 @@ echo '-------------------------------------'
 
 for i in $@
 do
+    echo "[D] 01"
     cache="http://101.96.9.133/"
     version=$(sed -n '1p' ./googlechrome/tmp/parse/${i}-result.info)
     dl_base=$(sed -n '2p' ./googlechrome/tmp/parse/${i}-result.info)
@@ -17,6 +18,7 @@ do
     size_raw=$(sed -n '6p' ./googlechrome/tmp/parse/${i}-result.info)
     size=$(awk 'BEGIN{printf "%.3f",('$size_raw'/'1048576')}')" MB"
 
+    echo "[D] 02"
     sed -i "s|{{${i}-Version}}|$version|g" ./googlechrome/tmp/chrome.xml
     sed -i "s|{{${i}-SHA256}}|$sha256|g" ./googlechrome/tmp/chrome.xml
     sed -i "s|{{${i}-dl-main}}|$dl|g" ./googlechrome/tmp/chrome.xml
