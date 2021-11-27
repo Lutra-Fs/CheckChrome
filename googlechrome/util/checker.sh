@@ -4,6 +4,8 @@ echo '-------------------------------------'
 
 echo 'Checking Chrome Stable x86 ......'
 
+echo $1
+
 curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' encoding='UTF-8'?>
             <request protocol='3.0' version='1.3.23.9' shell_version='1.3.21.103' ismachine='0'
                      sessionid='{3597644B-2952-4F92-AE55-D315F45F80A5}' installsource='ondemandcheckforupdate'
@@ -13,7 +15,7 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             <app appid='{8A69D345-D564-463C-AFF1-A69D9E530F96}' ap='-multi-chrome' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > $1/checker/stable-x86.xml
+            </request>" > ./googlechrome/tmp/checker/stable-x86.xml
 
 sleep 1
 
