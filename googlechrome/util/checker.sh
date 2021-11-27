@@ -13,7 +13,7 @@ curl -s "https://tools.google.com/service/update2" --data "<?xml version='1.0' e
             <app appid='{8A69D345-D564-463C-AFF1-A69D9E530F96}' ap='-multi-chrome' version='' nextversion='' lang='' brand='GGLS' client=''>
                 <updatecheck/>
             </app>
-            </request>" > $1/checker/stable-x86.xml
+            </request>" > ./googlechrome/tmp/checker/stable-x86.xml
 
 sleep 1
 
