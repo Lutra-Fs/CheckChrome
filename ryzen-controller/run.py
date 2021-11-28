@@ -81,9 +81,11 @@ if scoop_version < latest_version:
     os.environ["TZ"] = "UTC"
     time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     xml = "<?xml version=\"1.0\"?>"
+    xml += "<checker>"
     xml += f"<time>{time}</time>"
     xml += f"<version>{latest_version}</version>"
     xml += f"<url>{file_url}</url>"
+    xml += "</checker>"
 
     print("Writing to ./pages/ryzen-controller/latest.xml")
     os.makedirs("./pages/ryzen-controller", exist_ok=True)
