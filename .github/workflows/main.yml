@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: chrome ver check
+name: version checks
 
 # Controls when the workflow will run
 on:
@@ -28,10 +28,15 @@ jobs:
       - uses: actions/checkout@v2
       - name: "googlechrome: Install xmllint"
         run: sudo apt-get install libxml2-utils
-      - name: "googlechrome: Run script"
+      - name: "googlechrome: Run Bash script"
         run: |
           chmod +x ./googlechrome/run.sh
           ./googlechrome/run.sh
+      - name: "ryzen-controller: Run Python script"
+        # chmod +x ./ryzen-controller/run.sh
+        # ./ryzen-controller/run.sh
+        run: |
+          python3 ./ryzen-controller/run.py
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
