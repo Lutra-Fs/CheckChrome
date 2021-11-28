@@ -12,7 +12,7 @@ chmod +x ./googlechrome/util/generator.sh
 
 cp -rf ./googlechrome/src/chrome.xml ./googlechrome/tmp/chrome.xml
 
-DATE="$(echo $(TZ=UTC-8 date '+%Y-%m-%d %H:%M:%S'))"
+DATE="$(echo $(TZ=UTC date '+%Y-%m-%d %H:%M:%S'))"
 sed -i "s|{{CheckTime}}|$DATE|g" googlechrome/tmp/chrome.xml
 
 ./googlechrome/util/generator.sh "./googlechrome/tmp" stable-x86 stable-x64 beta-x86 beta-x64 dev-x86 dev-x64 canary-x86 canary-x64
