@@ -10,6 +10,7 @@ Update tracker for Google Chrome and some other packages.
     - `extras/googlechrome-beta`
     - `extras/googlechrome-dev`
     - `extras/googlechrome-canary`
+- Ryzen Controller (`extras/ryzen-controller`)
 
 
 ## Credit
