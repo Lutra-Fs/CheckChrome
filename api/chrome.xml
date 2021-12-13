@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2021-12-12 13:38:07</time>
+  <time>2021-12-13 13:37:42</time>
   <stable32>
     <version>96.0.4664.93</version>
     <download>
@@ -56,21 +56,21 @@
     <size>82117736</size>
   </dev64>
   <canary32>
-    <version>99.0.4760.0</version>
+    <version>99.0.4762.0</version>
     <download>
-      <url>https://redirector.gvt1.com/edgedl/release2/chrome/e35lz6w7hspfm5briexh3ylrzq_99.0.4760.0/99.0.4760.0_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/e35lz6w7hspfm5briexh3ylrzq_99.0.4760.0/99.0.4760.0_chrome_installer.exe</url>
+      <url>https://redirector.gvt1.com/edgedl/release2/chrome/ac42k3j6kwv2vv36sxltstvhxqba_99.0.4762.0/99.0.4762.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/ac42k3j6kwv2vv36sxltstvhxqba_99.0.4762.0/99.0.4762.0_chrome_installer.exe</url>
     </download>
-    <sha256>68f5ba47a6f971d83518ce6dfad529639fff401934612388672106a0ca102cd2</sha256>
-    <size>79190120</size>
+    <sha256>55f204d8f68450dbfedea39c3677341a6d3bb8eaa051a0b899e3f7d7029ea7ff</sha256>
+    <size>79147624</size>
   </canary32>
   <canary64>
-    <version>99.0.4760.0</version>
+    <version>99.0.4762.0</version>
     <download>
-      <url>https://redirector.gvt1.com/edgedl/release2/chrome/acu35w55f7sjqhytp2ri3t2flpwq_99.0.4760.0/99.0.4760.0_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/acu35w55f7sjqhytp2ri3t2flpwq_99.0.4760.0/99.0.4760.0_chrome_installer.exe</url>
+      <url>https://redirector.gvt1.com/edgedl/release2/chrome/hwipy2xkjkhlourvv4odzv4g3q_99.0.4762.0/99.0.4762.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/hwipy2xkjkhlourvv4odzv4g3q_99.0.4762.0/99.0.4762.0_chrome_installer.exe</url>
     </download>
-    <sha256>1c7ab98512947b119397ad49d5aacc49f23dcc13c6e67af933617d722bb5a095</sha256>
-    <size>82111080</size>
+    <sha256>c4ab065364013fcb1aaf971baec4b17b79105552642c613f33f91de4767a1833</sha256>
+    <size>82038888</size>
   </canary64>
 </chromechecker>
