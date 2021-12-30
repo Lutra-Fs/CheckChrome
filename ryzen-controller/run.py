@@ -36,8 +36,7 @@ def search_regex(url: str, regex: str) -> str:
         raise AttributeError(f"Could not match regex {regex} in {url}")
     return match.group(1)
 
-# bucket = "ScoopInstaller/Extras"
-bucket = "issaclin32/scoop-bucket" # !!! only used for testing before the manifest is merged
+bucket = "ScoopInstaller/Extras"
 package_name = "ryzen-controller"
 
 scoop_manifest_url = f"https://raw.githubusercontent.com/{bucket}/master/bucket/{package_name}.json"
