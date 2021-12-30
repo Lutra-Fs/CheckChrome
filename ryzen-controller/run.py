@@ -50,7 +50,8 @@ latest_version = LooseVersion(v)
 print(f"latest version: {latest_version}")
 
 # The release page is obfuscated with Jscrambler. Therefore some trick is needed to track the version.
-if scoop_version < latest_version:
+if True:  # temporary fix
+# if scoop_version < latest_version:
     found = False # used for breaking nested loop
     for i in range(1, 11):
         if found:
