@@ -76,17 +76,17 @@ if scoop_version < latest_version:
         raise RuntimeError("Could find Windows Binary after searching 10 pages of job list")
 
 
-    # Generating XML
-    os.environ["TZ"] = "UTC"
-    time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    xml = "<?xml version=\"1.0\"?>"
-    xml += "<Document>"
-    xml += f"<time>{time}</time>"
-    xml += f"<version>{latest_version}</version>"
-    xml += f"<url>{file_url}</url>"
-    xml += "</Document>"
+# Generating XML
+os.environ["TZ"] = "UTC"
+time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+xml = "<?xml version=\"1.0\"?>"
+xml += "<Document>"
+xml += f"<time>{time}</time>"
+xml += f"<version>{latest_version}</version>"
+xml += f"<url>{file_url}</url>"
+xml += "</Document>"
 
-    print("Writing to ./pages/ryzen-controller/latest.xml")
-    os.makedirs("./pages/ryzen-controller", exist_ok=True)
-    with open("./pages/ryzen-controller/latest.xml", "w") as f:
-        f.write(xml)
+print("Writing to ./pages/ryzen-controller/latest.xml")
+os.makedirs("./pages/ryzen-controller", exist_ok=True)
+with open("./pages/ryzen-controller/latest.xml", "w") as f:
+    f.write(xml)
