@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2022-01-11 13:39:11</time>
+  <time>2022-01-12 13:39:33</time>
   <stable32>
     <version>97.0.4692.71</version>
     <download>
@@ -38,22 +38,22 @@
     <size>82088040</size>
   </beta64>
   <dev32>
-    <version>98.0.4758.10</version>
+    <version>98.0.4758.11</version>
     <download>
-      <url>https://redirector.gvt1.com/edgedl/release2/chrome/ac2odx2bshzrkcskllj5euyus65a_98.0.4758.10/98.0.4758.10_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/ac2odx2bshzrkcskllj5euyus65a_98.0.4758.10/98.0.4758.10_chrome_installer.exe</url>
+      <url>https://redirector.gvt1.com/edgedl/release2/chrome/acd6m5yp6rlrk23x2yjjsxwfywka_98.0.4758.11/98.0.4758.11_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/acd6m5yp6rlrk23x2yjjsxwfywka_98.0.4758.11/98.0.4758.11_chrome_installer.exe</url>
     </download>
-    <sha256>90c5407d4993f9b2a14d95523d0f7a08dca99f5cae8787665fc4fc7c2e3a56ef</sha256>
-    <size>79023720</size>
+    <sha256>df154e2b64a5d399bf3a2776c844a702f3c7a2f7d0f7475d96a19385a2b159ef</sha256>
+    <size>79038568</size>
   </dev32>
   <dev64>
-    <version>98.0.4758.10</version>
+    <version>99.0.4818.2</version>
     <download>
-      <url>https://redirector.gvt1.com/edgedl/release2/chrome/acqcs5qddpzler3gaiyle2cjzofa_98.0.4758.10/98.0.4758.10_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/acqcs5qddpzler3gaiyle2cjzofa_98.0.4758.10/98.0.4758.10_chrome_installer.exe</url>
+      <url>https://redirector.gvt1.com/edgedl/release2/chrome/acjpllq4xfc4rkmihkdnwydr4nza_99.0.4818.2/99.0.4818.2_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/acjpllq4xfc4rkmihkdnwydr4nza_99.0.4818.2/99.0.4818.2_chrome_installer.exe</url>
     </download>
-    <sha256>66a0aa55ba3f29e7e38fd0c8959ff645c379d794259aceb7fad3f4d88d8c8ac6</sha256>
-    <size>81689192</size>
+    <sha256>b57f512fc6590259942de1d3240769710f583295f7184ca046784f383e7b45a7</sha256>
+    <size>82117736</size>
   </dev64>
   <canary32>
     <version>99.0.4819.0</version>
