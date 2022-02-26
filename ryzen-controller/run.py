@@ -6,6 +6,8 @@ import urllib
 import urllib.request
 from distutils.version import LooseVersion
 
+JOB_PAGES_TO_SEARCH = 20
+
 # Loads content from the URL
 # If ignore_errors is set to False(default), then will raise exception when response code is not 200(OK)
 # If ignore_errors is set to True, then return an empty string ("") and print exception in the log when error happens
@@ -53,7 +55,7 @@ print(f"latest version: {latest_version}")
 if True:  # temporary fix
 # if scoop_version < latest_version:
     found = False # used for breaking nested loop
-    for i in range(1, 11):
+    for i in range(1, JOB_PAGES_TO_SEARCH+1):
         if found:
             break
         url = f"https://gitlab.com/ryzen-controller-team/ryzen-controller/-/jobs?page={i}"
@@ -74,7 +76,7 @@ if True:  # temporary fix
                 else:
                     print(f"    - Response: unreachable/redirected")
     else:
-        raise RuntimeError("Could find Windows Binary after searching 10 pages of job list")
+        raise RuntimeError(f"Could find Windows Binary after searching {JOB_PAGES_TO_SEARCH} pages of job list")
 
 
 # Generating XML
