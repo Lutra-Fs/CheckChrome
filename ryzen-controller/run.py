@@ -6,7 +6,7 @@ import urllib
 import urllib.request
 from distutils.version import LooseVersion
 
-JOB_PAGES_TO_SEARCH = 50
+JOB_PAGES_TO_SEARCH = 100
 
 # Loads content from the URL
 # If ignore_errors is set to False(default), then will raise exception when response code is not 200(OK)
