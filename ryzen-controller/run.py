@@ -44,6 +44,7 @@ package_name = "ryzen-controller"
 scoop_manifest_url = f"https://raw.githubusercontent.com/{bucket}/master/bucket/{package_name}.json"
 manifest = json.loads(load_url(scoop_manifest_url))
 scoop_version = LooseVersion(manifest["version"])
+file_url = manifest["architecture"]["64bit"]["url"].replace("#/dl.7z", "")
 print(f"scoop version: {scoop_version}")
 
 checkver_url = "https://gitlab.com/ryzen-controller-team/ryzen-controller/-/tags?sort=name_desc&format=atom"
