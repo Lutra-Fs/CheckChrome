@@ -6,7 +6,7 @@ import urllib
 import urllib.request
 from distutils.version import LooseVersion
 
-JOB_PAGES_TO_SEARCH = 200
+JOB_PAGES_TO_SEARCH = 999
 
 # Loads content from the URL
 # If ignore_errors is set to False(default), then will raise exception when response code is not 200(OK)
@@ -52,8 +52,7 @@ latest_version = LooseVersion(v)
 print(f"latest version: {latest_version}")
 
 # The release page is obfuscated with Jscrambler. Therefore some trick is needed to track the version.
-if True:  # temporary fix
-# if scoop_version < latest_version:
+if scoop_version < latest_version:
     found = False # used for breaking nested loop
     for i in range(1, JOB_PAGES_TO_SEARCH+1):
         if found:
