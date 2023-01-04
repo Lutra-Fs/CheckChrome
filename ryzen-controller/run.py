@@ -52,31 +52,30 @@ v = search_regex(checkver_url, "ryzen-controller/-/tags/([\\d.]+)")
 latest_version = LooseVersion(v)
 print(f"latest version: {latest_version}")
 
-# The release page is obfuscated with Jscrambler. Therefore some trick is needed to track the version.
 if scoop_version < latest_version:
-    found = False # used for breaking nested loop
-    for i in range(1, JOB_PAGES_TO_SEARCH+1):
-        if found:
-            break
-        url = f"https://gitlab.com/ryzen-controller-team/ryzen-controller/-/jobs?page={i}"
-        print(f"Loading {url}")
-        cont = load_url(url)
-        for jobid in re.findall(re.compile("-/jobs/(\\d+)\">installers</a>"), cont):
-            print(f"Checking Job ID {jobid} with name \"installers\"")
-            file_url = f"https://gitlab.com/ryzen-controller-team/ryzen-controller/-/jobs/{jobid}/artifacts/raw/dist/win/Ryzen%20Controller%20Setup%20{latest_version}.exe"
-            try:
-                f = urllib.request.urlopen(file_url)
-            except Exception as e:
-                print(f"    - Response: {e}")
-            else:
-                if f.getcode() == 200:
-                    print(f"    - Found file: {file_url}")
-                    found = True
-                    break
-                else:
-                    print(f"    - Response: unreachable/redirected")
+    found = False
+    url = f"https://gitlab.com/api/v4/projects/ryzen-controller-team%2Fryzen-controller/releases/{latest_version}/assets/links"
+    print(f"Loading {url}")
+    cont = json.loads(load_url(url))
+    link = next(obj for obj in cont if obj["name"] == "Windows installer")
+    # Follow shortened URL to get Job ID
+    assets_url = urllib.request.urlopen(link["url"]).geturl()
+    jobid = re.findall(re.compile("-/jobs/(\\d+)/"), assets_url)[0]
+    print(f"Checking Job ID {jobid}")
+
+    file_url = f"https://gitlab.com/ryzen-controller-team/ryzen-controller/-/jobs/{jobid}/artifacts/raw/dist/win/Ryzen%20Controller%20Setup%20{latest_version}.exe"
+    try:
+        f = urllib.request.urlopen(file_url)
+    except Exception as e:
+        print(f"    - Response: {e}")
     else:
-        raise RuntimeError(f"Could find Windows Binary after searching {JOB_PAGES_TO_SEARCH} pages of job list")
+        if f.getcode() == 200:
+            print(f"    - Found file: {file_url}")
+            found = True
+        else:
+            print(f"    - Response: unreachable/redirected")
+    if not found:
+        raise RuntimeError(f"Could find Windows Binary: {file_url}")
 
 
 # Generating XML
