@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2023-01-19 13:36:54</time>
+  <time>2023-01-20 13:36:52</time>
   <stable32>
     <version>109.0.5414.75</version>
     <download>
@@ -38,13 +38,13 @@
     <size>93163560</size>
   </beta64>
   <dev32>
-    <version>109.0.5414.25</version>
+    <version/>
     <download>
-      <url>https://109.0.5414.25_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/adm2qfnegu6to76zjxqzphpslpuq_109.0.5414.25/109.0.5414.25_chrome_installer.exe</url>
+      <url>https://</url>
+      <url>https://</url>
     </download>
-    <sha256>31bae3dae4e04e7a11d9f72341b68e1694535dace16b93a295b5b35b04b0e1ad</sha256>
-    <size>89239592</size>
+    <sha256/>
+    <size/>
   </dev32>
   <dev64>
     <version>109.0.5414.25</version>
