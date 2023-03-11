@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2023-03-11 13:36:48</time>
+  <time>2023-03-12 07:44:50</time>
   <stable32>
     <version>111.0.5563.65</version>
     <download>
@@ -56,13 +56,13 @@
     <size>93779496</size>
   </dev64>
   <canary32>
-    <version>113.0.5644.0</version>
+    <version>113.0.5646.0</version>
     <download>
-      <url>https://113.0.5644.0_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/otwg4blledipc3wtixsaxjogq4_113.0.5644.0/113.0.5644.0_chrome_installer.exe</url>
+      <url>https://113.0.5646.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/adbpb6qlp77mntyb672rd266ufuq_113.0.5646.0/113.0.5646.0_chrome_installer.exe</url>
     </download>
-    <sha256>dc4484046901881597d4cdd1d66d635f2801c692a5b23c459c306b2b07496c4a</sha256>
-    <size>90441768</size>
+    <sha256>85570c4ee12f5498e549152b2237c28439a48dc6f6777e519a488d356995b3f0</sha256>
+    <size>90282024</size>
   </canary32>
   <canary64>
     <version>113.0.5645.0</version>
