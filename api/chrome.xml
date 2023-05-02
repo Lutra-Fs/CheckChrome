@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2023-05-01 13:36:59</time>
+  <time>2023-05-02 13:37:16</time>
   <stable32>
     <version>112.0.5615.138</version>
     <download>
@@ -56,21 +56,21 @@
     <size>95035432</size>
   </dev64>
   <canary32>
-    <version>115.0.5742.0</version>
+    <version>115.0.5745.0</version>
     <download>
-      <url>https://115.0.5742.0_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/bsc6inguut52mrmzyowe6wgtiq_115.0.5742.0/115.0.5742.0_chrome_installer.exe</url>
+      <url>https://115.0.5745.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/adkgbeqidwitzybtni5ismi25dla_115.0.5745.0/115.0.5745.0_chrome_installer.exe</url>
     </download>
-    <sha256>bb46817f230b3181b33a3ec2371f6b4ddeceb9fa14e416a13846d3f23264a1c2</sha256>
-    <size>90787880</size>
+    <sha256>6d23a29ea875208290b303b73a181e4762775a7245954c2b0ce5d24c1c595cb6</sha256>
+    <size>90689064</size>
   </canary32>
   <canary64>
-    <version>115.0.5743.0</version>
+    <version>115.0.5745.0</version>
     <download>
-      <url>https://115.0.5743.0_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/hnxhdsx3l6kfu224xyiepx6wum_115.0.5743.0/115.0.5743.0_chrome_installer.exe</url>
+      <url>https://115.0.5745.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/ad5pa4m3qv6zbwr5fahwjwx6jkja_115.0.5745.0/115.0.5745.0_chrome_installer.exe</url>
     </download>
-    <sha256>73ed2a16c6ec2522c2675b93134ba8bd6fadded6febc35dfe048c31d4795e256</sha256>
-    <size>94884904</size>
+    <sha256>59a7d3a46aea090994d9ee4f2e0042abf3ce90ee8aaeecd43cfb21b424d52512</sha256>
+    <size>95007272</size>
   </canary64>
 </chromechecker>
