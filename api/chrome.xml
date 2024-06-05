@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2024-06-04 13:39:13</time>
+  <time>2024-06-05 13:37:11</time>
   <stable32>
     <version>125.0.6422.142</version>
     <download>
@@ -56,21 +56,21 @@
     <size>114807344</size>
   </dev64>
   <canary32>
-    <version>127.0.6518.2</version>
+    <version>127.0.6520.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/adkkc3k5mm5uptm2swtfb6cbpera_127.0.6518.2/127.0.6518.2_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/adkkc3k5mm5uptm2swtfb6cbpera_127.0.6518.2/127.0.6518.2_chrome_installer.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/ksi5noszhli3broepywzw2uc3u_127.0.6520.0/127.0.6520.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/ksi5noszhli3broepywzw2uc3u_127.0.6520.0/127.0.6520.0_chrome_installer.exe</url>
     </download>
-    <sha256>5a61f251446327ba51b0aa7619289c04529a1ed2109e156ef627e8a5eae6bc18</sha256>
-    <size>103639600</size>
+    <sha256>f0eef42ff62b5271c3267e6d9020415c53b2813f2e9a4d62760f90ed0b2094ea</sha256>
+    <size>99920432</size>
   </canary32>
   <canary64>
-    <version>127.0.6518.2</version>
+    <version>127.0.6520.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/odokdkvicueosvradytfthep2q_127.0.6518.2/127.0.6518.2_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/odokdkvicueosvradytfthep2q_127.0.6518.2/127.0.6518.2_chrome_installer.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/acnmkajg4gbq7qqfokpxz2mtcc4a_127.0.6520.0/127.0.6520.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/acnmkajg4gbq7qqfokpxz2mtcc4a_127.0.6520.0/127.0.6520.0_chrome_installer.exe</url>
     </download>
-    <sha256>72e7ddb846abf27cb5ffe3aa010f76f03001029093a6ecc6b6a3e5f9198d6eca</sha256>
-    <size>114864688</size>
+    <sha256>d75a98e42110504425c01a7c82981db316142734703cb40e548f09e39ae452c1</sha256>
+    <size>112093744</size>
   </canary64>
 </chromechecker>
