@@ -32,9 +32,9 @@ do
     # Extract version - simpler pattern
     VERSION=$(sed -n 's/.*manifest version="\([^"]*\)".*/\1/p' "$XML_FILE")
     
-    # Extract URLs - with complete base URLs
-    URL1=$(sed -n 's/.*codebase="\(https:\/\/edgedl\.me\.gvt1\.com\/[^"]*\)".*/\1/p' "$XML_FILE" | head -1)
-    URL2=$(sed -n 's/.*codebase="\(https:\/\/dl\.google\.com\/[^"]*\)".*/\1/p' "$XML_FILE" | head -1)
+    # Extract URLs - without https:// protocol
+    URL1=$(sed -n 's/.*codebase="https:\/\/\(edgedl\.me\.gvt1\.com\/[^"]*\)".*/\1/p' "$XML_FILE" | head -1)
+    URL2=$(sed -n 's/.*codebase="https:\/\/\(dl\.google\.com\/[^"]*\)".*/\1/p' "$XML_FILE" | head -1)
     
     # Extract installer name - simpler pattern
     INSTALLER=$(sed -n 's/.*run="\([^"]*\)".*/\1/p' "$XML_FILE" | head -1)
