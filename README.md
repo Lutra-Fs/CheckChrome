@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/github/license/Lutra-Fs/CheckChrome.svg?style=flat-square)](./LICENSE)
 
 ## Live Demo
-Access the fixed version at: https://lutra-fs.github.io/CheckChrome
+Access the fixed version at: https://lutra-fs.github.io/CheckChrome/
 
 ## API Documentation
 
