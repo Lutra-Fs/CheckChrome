@@ -22,8 +22,65 @@ sed -i "s|{{CheckTime}}|$DATE|g" tmp/chrome.xml
 
 ./util/generator.sh stable-x86 stable-x64 beta-x86 beta-x64 dev-x86 dev-x64 canary-x86 canary-x64
 
-xmllint --format tmp/chrome.xml > tmp/api/chrome.xml
-xmllint --noblanks tmp/chrome.xml > tmp/api/chrome.min.xml
+# Function to format XML
+format_xml() {
+    local input=$1
+    local output=$2
+    
+    # Read input file and process it
+    sed '
+        # Add newline after elements that end with >
+        s/>/>\n/g
+        # Remove empty lines
+        /^[[:space:]]*$/d
+    ' "$input" | awk '
+        # Initialize indent level
+        BEGIN { indent = 0 }
+        
+        # Processing each line
+        {
+            # Remove leading/trailing whitespace
+            gsub(/^[ \t]+|[ \t]+$/, "")
+            
+            # Decrease indent for closing tags
+            if (match($0, "^</")) {
+                indent -= 2
+            }
+            
+            # Print the indented line
+            printf "%*s%s\n", indent, "", $0
+            
+            # Increase indent for opening tags that are not self-closing
+            if (match($0, "^<[^/]") && !match($0, "/>$")) {
+                indent += 2
+            }
+        }
+    ' > "$output"
+}
+
+# Function to minify XML
+minify_xml() {
+    local input=$1
+    local output=$2
+    
+    # Remove newlines, leading/trailing whitespace, and consolidate spaces
+    tr -d '\n' < "$input" | \
+    sed -E '
+        # Remove spaces between tags
+        s/>[[:space:]]+</></g
+        # Remove leading/trailing whitespace
+        s/^[[:space:]]+//
+        s/[[:space:]]+$//
+        # Consolidate multiple spaces into one
+        s/[[:space:]]+/ /g
+    ' > "$output"
+}
+
+# Format XML
+format_xml "tmp/chrome.xml" "tmp/api/chrome.xml"
+
+# Minify XML
+minify_xml "tmp/chrome.xml" "tmp/api/chrome.min.xml"
 
 cp -rf tmp/index.html public/index.html
 cp -rf tmp/api/chrome.xml public/api/chrome.xml
