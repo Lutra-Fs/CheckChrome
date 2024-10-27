@@ -26,11 +26,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      - name: update package manager database
-        run: sudo apt-get update
-      - name: Install xmllint
-        run: sudo apt-get install libxml2-utils
-      - name: Run a multi-line script
+      - name: Run run.sh
         run: |
           chmod +x ./run.sh
           ./run.sh
