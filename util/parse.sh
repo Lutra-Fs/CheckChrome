@@ -1,44 +1,69 @@
+#!/bin/bash
+
 echo ''
 echo '-------------------------------------'
 echo 'Parsing data ......'
 echo '-------------------------------------'
 
-for i in $@
+extract_value() {
+    local file=$1
+    local start_pattern=$2
+    local end_pattern=$3
+    local attribute=$4
+    
+    # Create a temporary file with relevant section only
+    sed -n "/${start_pattern}/,/${end_pattern}/p" "$file" > tmp.xml
+    
+    # Extract the attribute value
+    sed -n "/${attribute}=\"[^\"]*\"/ {
+        s/.*${attribute}=\"//
+        s/\".*//
+        p
+    }" tmp.xml | head -1
+    
+    rm -f tmp.xml
+}
+
+for i in "$@"
 do
-    echo 'Parsing '${i}' data ......'
-
-    # xmllint --format ./tmp/checker/${i}.xml > ./tmp/checker/${i}.format.xml
-    # ./util/xmlparser.sh ./tmp/checker/${i}.format.xml > ./tmp/parse/${i}.info
-
-    # sed -i 's|        ELEMENT=manifest ATTRIBUTE=version VALUE=||g' ./tmp/parse/${i}.info
-    # sed -i 's|        ELEMENT=url ATTRIBUTE=codebase VALUE=||g' ./tmp/parse/${i}.info
-    # sed -i 's| ATTRIBUTE=hash |\n|g' ./tmp/parse/${i}.info
-    # sed -i 's| ATTRIBUTE=name VALUE=|\n|g' ./tmp/parse/${i}.info
-    # sed -i 's| ATTRIBUTE=required VALUE=true ATTRIBUTE=size VALUE=|\n|g' ./tmp/parse/${i}.info
-    # sed -i 's| ATTRIBUTE=hash_sha256 VALUE=|\n|g' ./tmp/parse/${i}.info
-    # sed -i 's|    ELEMENT=time ATTRIBUTE=checktime VALUE=||g' ./tmp/parse/${i}.info
-    # sed -i 's|https://||g' ./tmp/parse/${i}.info
-    # sed -i 's| ||g' ./tmp/parse/${i}.info
-
-    # sed -n '14p' ./tmp/parse/${i}.info > ./tmp/parse/${i}-result.info
-    # sed -n '8p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
-    # sed -n '10p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
-    # sed -n '23p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
-    # sed -n '22p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
-    # sed -n '24p' ./tmp/parse/${i}.info >> ./tmp/parse/${i}-result.info
-    VERSION=$(xmllint --xpath "string(/response/app/updatecheck/manifest/@version)" ./tmp/checker/${i}.xml) 
-    URL1=$(xmllint --xpath "string(/response/app/updatecheck/urls/url[starts-with(@codebase,'https://edgedl.me.gvt1.com')]/@codebase)" ./tmp/checker/${i}.xml)
-    URL2=$(xmllint --xpath "string(/response/app/updatecheck/urls/url[starts-with(@codebase,'https://dl.google.com')]/@codebase )" ./tmp/checker/${i}.xml)
-    INSTALLER=$(xmllint --xpath "string(/response/app/updatecheck/manifest/actions/action[@event='install']/@run)" ./tmp/checker/${i}.xml)
-    SHA256=$(xmllint --xpath "string(/response/app/updatecheck/manifest/packages/package/@hash_sha256)" ./tmp/checker/${i}.xml)
-    SIZE=$(xmllint --xpath "string(/response/app/updatecheck/manifest/packages/package/@size)" ./tmp/checker/${i}.xml)
-    echo $VERSION  > ./tmp/parse/${i}-result.info
-    echo $URL1  >> ./tmp/parse/${i}-result.info
-    #xmllint --xpath "string(/response/app/updatecheck/urls/url[starts-with(@codebase,'https://redirector.gvt1.com')]/@codebase)" ./tmp/checker/${i}.xml >> ./tmp/parse/${i}-result.info
-    echo $URL2 >> ./tmp/parse/${i}-result.info
-    #xmllint --xpath "string(/response/app/updatecheck/urls/url[starts-with(@codebase,'https://www.google.com')]/@codebase)" ./tmp/checker/${i}.xml >> ./tmp/parse/${i}-result.info
-    sed -i 's|https://||g' ./tmp/parse/${i}-result.info
-    echo $INSTALLER  >> ./tmp/parse/${i}-result.info
-    echo $SHA256  >> ./tmp/parse/${i}-result.info
-    echo $SIZE  >> ./tmp/parse/${i}-result.info
+    echo "Parsing ${i} data ......"
+    XML_FILE="./tmp/checker/${i}.xml"
+    RESULT_FILE="./tmp/parse/${i}-result.info"
+    
+    # Extract version - look between <manifest and </manifest>
+    VERSION=$(extract_value "$XML_FILE" "<manifest" "</manifest>" "version")
+    
+    # Extract URLs - look between <urls and </urls>
+    URL1=$(sed -n '/<urls/,/<\/urls>/p' "$XML_FILE" | \
+           sed -n '/edgedl\.me\.gvt1\.com/ {
+               s/.*codebase="https:\/\/edgedl\.me\.gvt1\.com\///
+               s/".*//
+               p
+           }' | head -1)
+    
+    URL2=$(sed -n '/<urls/,/<\/urls>/p' "$XML_FILE" | \
+           sed -n '/dl\.google\.com/ {
+               s/.*codebase="https:\/\/dl\.google\.com\///
+               s/".*//
+               p
+           }' | head -1)
+    
+    # Extract installer - look between <actions and </actions>
+    INSTALLER=$(extract_value "$XML_FILE" "<actions" "</actions>" "run")
+    
+    # Extract SHA256 - look between <packages and </packages>
+    SHA256=$(extract_value "$XML_FILE" "<packages" "</packages>" "hash_sha256")
+    
+    # Extract size - look between <packages and </packages>
+    SIZE=$(extract_value "$XML_FILE" "<packages" "</packages>" "size")
+    
+    # Write results to file
+    {
+        echo "$VERSION"
+        echo "$URL1"
+        echo "$URL2"
+        echo "$INSTALLER"
+        echo "$SHA256"
+        echo "$SIZE"
+    } > "$RESULT_FILE"
 done
