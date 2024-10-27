@@ -1,283 +1,545 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <title>Chrome 离线包 - SukkaLab</title>
-    <link rel="shortcut icon" type="image/ico" href="https://cdn.jsdelivr.net/npm/skx@0.0.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome 离线包 - Modern</title>
+    <meta name="description" content="Chrome Offline Packages Download | Chrome 离线包下载" data-en="Chrome Offline Packages Download" data-zh="又一个 Chrome 离线包下载">
     <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/npm/skx@0.0.1/favicon/favicon-32x32.png">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content="又一个 Chrome 离线包下载">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/suka.css@0.1.2">
-    <style>.sk-shadow-1{border:1px solid #eee}.sha-256{overflow:hidden;user-select:all}body{font-family:-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,sans-serif}.a,.h1,.h2,.h3,.h4,.h5,.lead,a,button,div,h1,h2,h3,h4,h5,input,label,option,select,span,textarea{font-family:-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,sans-serif}.bs-callout{margin:20px 0;padding:1pc;border:1px solid #eee;border-radius:3px;border-left-width:5px;word-break:break-all}.bs-callout h4{margin-top:0;margin-bottom:5px}.bs-callout blockquote{font-size:14px}.bs-callout p:last-child{margin-bottom:0}.bs-callout code{border-radius:3px}.bs-callout+.bs-callout{margin-top:-5px}.bs-callout-success{border-left-color:#393}.bs-callout-success h4{color:#393}.bs-callout-danger{border-left-color:#ce4844}.bs-callout-danger h4{color:#ce4844}.bs-callout-warning{border-left-color:#aa6708}.bs-callout-warning h4{color:#aa6708}.bs-callout-info{border-left-color:#1b809e}.bs-callout-info h4{color:#1b809e}</style>
-    <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3"></script><script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script><![endif]-->
-    <meta property="og:title" content="Chrome 离线包 - SukkaLab">
-    <meta property="og:type" content="Website">
-    <meta property="og:url" content="https://chrome-dl.com">
-    <meta property="og:description" content="又一个 Chrome 离线包下载">
-    <meta name="twitter:card" content="summary">
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --success: #188038;
+            --warning: #c5221f;
+            --text: #202124;
+            --bg: #ffffff;
+            --border: #dadce0;
+            --shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+            
+            --spacing-1: 0.25rem;
+            --spacing-2: 0.5rem;
+            --spacing-3: 1rem;
+            --spacing-4: 1.5rem;
+            --spacing-5: 2rem;
+        }
+
+        [data-theme="dark"] {
+            --primary: #8ab4f8;
+            --success: #81c995;
+            --warning: #f28b82;
+            --text: #e8eaed;
+            --bg: #202124;
+            --border: #5f6368;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-3);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-4) 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .controls {
+            display: flex;
+            gap: var(--spacing-2);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: var(--spacing-2) var(--spacing-3);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background: transparent;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+            border-color: var(--success);
+        }
+
+        .btn-warning {
+            background: var(--warning);
+            color: white;
+            border-color: var(--warning);
+        }
+
+        .card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: var(--spacing-4);
+            margin: var(--spacing-3) 0;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-4);
+        }
+
+        .version-info {
+            margin-bottom: var(--spacing-3);
+        }
+
+        .sha-256 {
+            background: rgba(0, 0, 0, 0.03);
+            padding: var(--spacing-2);
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            overflow-wrap: break-word;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .sha-256:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .button-group {
+            display: flex;
+            gap: var(--spacing-2);
+            margin-top: var(--spacing-3);
+        }
+
+        .notice {
+            background: rgba(0, 0, 0, 0.03);
+            border-left: 4px solid var(--primary);
+            padding: var(--spacing-3);
+            margin: var(--spacing-4) 0;
+            border-radius: 4px;
+        }
+
+        .notice.warning {
+            border-left-color: var(--warning);
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: var(--spacing-3);
+                text-align: center;
+            }
+        }
+
+        [data-lang]:not([data-lang="zh"]) [lang="zh"],
+        [data-lang]:not([data-lang="en"]) [lang="en"] {
+            display: none;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
 </head>
+<body data-lang="zh" data-theme="light">
+    <div class="container">
+        <header class="header">
+            <h1>
+                <span lang="zh">Chrome 离线包下载</span>
+                <span lang="en">Chrome Offline Packages</span>
+                <small>For Windows Only</small>
+            </h1>
+            <div class="controls">
+                <button class="btn" onclick="toggleLanguage()" data-zh="Switch to English" data-en="切换为中文">
+                    <span lang="zh">Switch to English</span>
+                    <span lang="en">切换为中文</span>
+                </button>
+                <button class="btn" onclick="toggleTheme()" aria-label="Toggle theme">
+                    <span>🌓</span>
+                </button>
+            </div>
+        </header>
 
-<body>
-    <div class="container sk-pb-8">
-        <div class="sk-pt-8">
-            <h1 class="h2 text-center">Chrome 离线包下载&nbsp;<small>For Windows Only</small></h1>
-            <p class="h3 sk-mt-0 text-center">
-                <small>查询时间 2024-10-27 13:08:29</small>
+        <div class="notice" role="alert">
+            <h2>
+                <span lang="zh">提示</span>
+                <span lang="en">Notice</span>
+            </h2>
+            <p lang="zh">
+                这里提供 Google 官方的 Chrome 浏览器离线包（Windows）下载，
+                <strong>通过离线包安装的 Chrome 浏览器没有内置在线更新</strong>
+            </p>
+            <p lang="en">
+                This page provides official Google Chrome offline installers (Windows).
+                <strong>Chrome installed via offline packages does not include built-in online updates</strong>
+            </p>
+            <h3>Chrome Official Website</h3>
+            <p>
+                <a href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer">google.com/chrome</a>
+                <span lang="zh">（中国大陆地区不可访问）</span>
+                <span lang="en">(Not accessible in mainland China)</span>
+                <br>
+                <a href="https://www.google.cn/chrome/" target="_blank" rel="noopener noreferrer">google.cn/chrome</a>
+                <span lang="zh">（中国大陆地区可访问）</span>
+                <span lang="en">(Accessible in mainland China)</span>
             </p>
         </div>
 
-        <div class="bs-callout bs-callout-success sk-shadow-1">
-            <h4 class="sk-mb-4">提示</h4>
-            <p>这里提供 Google 官方的 Chrome 浏览器离线包（Windows）下载，<b>通过离线包安装的 Chrome 浏览器没有内置在线更新</b></p>
-            <h5 class="sk-text-bold">Chrome 官网</h5>
-            <p>如果需要下载内置在线更新的 Chrome 浏览器、或对本站提供的离线包不放心，请前往 Google Chrome 官网</p>
-            <p><a href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer">https://www.google.com/chrome/</a>（中国大陆地区不可访问）<br><a href="https://www.google.cn/chrome/" target="_blank" rel="noopener noreferrer">https://www.google.cn/chrome/</a>（中国大陆地区可访问）</p>
-            <h5 class="sk-text-bold">选择离线包版本</h5>
+        <nav>
+            <a href="#stable" class="btn">Stable</a>
+            <a href="#beta" class="btn">Beta</a>
+            <a href="#dev" class="btn">Dev</a>
+            <a href="#canary" class="btn">Canary</a>
+        </nav>
+
+        <section id="stable">
+            <h2>
+                <span lang="zh">稳定版</span>
+                <span lang="en">Stable Version</span>
+            </h2>
+            <div class="grid">
+                <!-- x86 Card -->
+                <div class="card">
+                    <div class="version-info">
+                        <h3>Stable 32-bit <small>130.0.6723.70</small></h3>
+                        <p>
+                            <span lang="zh">文件大小</span>
+                            <span lang="en">File size</span>:
+                            <code>98.485 MB</code>
+                        </p>
+                        <div class="sha-256" onclick="copyToClipboard(this)" title="Click to copy">
+                            0e8bc63c332260e2a9a648569d76383833da4a3f1d4db63ae75f91b6f974589b
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <a href="https://edgedl/release2/chrome/acawua43qdcszeqhgksfb55bia_130.0.6723.70/130.0.6723.70_chrome_installer.exe" class="btn btn-success" download>
+                            <span lang="zh">下载</span>
+                            <span lang="en">Download</span>
+                        </a>
+                        <a href="https://release2/chrome/acawua43qdcszeqhgksfb55bia_130.0.6723.70/130.0.6723.70_chrome_installer.exe" class="btn" download>
+                            <span lang="zh">备选地址</span>
+                            <span lang="en">Mirror</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- x64 Card -->
+                <div class="card">
+                    <div class="version-info">
+                        <h3>Stable 64-bit <small>130.0.6723.70</small></h3>
+                        <p>
+                            <span lang="zh">文件大小</span>
+                            <span lang="en">File size</span>:
+                            <code>110.136 MB</code>
+                        </p>
+                        <div class="sha-256" onclick="copyToClipboard(this)" title="Click to copy">
+                            95af56889eeb7c012af7e775a2f05b6b3a5cc157efdde6309a3cb94ffb39ff87
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <a href="https://edgedl/release2/chrome/gp4euzff246fspqt6uwnrqmx6y_130.0.6723.70/130.0.6723.70_chrome_installer.exe" class="btn btn-success" download>
+                            <span lang="zh">下载</span>
+                            <span lang="en">Download</span>
+                        </a>
+                        <a href="https://release2/chrome/gp4euzff246fspqt6uwnrqmx6y_130.0.6723.70/130.0.6723.70_chrome_installer.exe" class="btn" download>
+                            <span lang="zh">备选地址</span>
+                            <span lang="en">Mirror</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beta Section -->
+        <section id="beta">
+            <h2>
+                <span lang="zh">测试版</span>
+                <span lang="en">Beta Version</span>
+            </h2>
+            <div class="grid">
+                <!-- Beta x86 Card -->
+                <div class="card">
+                    <div class="version-info">
+                        <h3>Beta 32-bit <small>131.0.6778.13</small></h3>
+                        <p>
+                            <span lang="zh">文件大小</span>
+                            <span lang="en">File size</span>:
+                            <code>98.919 MB</code>
+                        </p>
+                        <div class="sha-256" onclick="copyToClipboard(this)" title="Click to copy">
+                            26883d894b968d5adc235a3c72eeace1958cc2e0036d3fe0beff290ea89fd33a
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <a href="https://edgedl/release2/chrome/frurpu3cdoafz43rg5nasds4oq_131.0.6778.13/131.0.6778.13_chrome_installer.exe" class="btn btn-primary" download>
+                            <span lang="zh">下载</span>
+                            <span lang="en">Download</span>
+                        </a>
+                        <a href="https://release2/chrome/frurpu3cdoafz43rg5nasds4oq_131.0.6778.13/131.0.6778.13_chrome_installer.exe" class="btn" download>
+                            <span lang="zh">备选地址</span>
+                            <span lang="en">Mirror</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Beta x64 Card -->
+                <div class="card">
+                    <div class="version-info">
+                        <h3>Beta 64-bit <small>131.0.6778.13</small></h3>
+                        <p>
+                            <span lang="zh">文件大小</span>
+                            <span lang="en">File size</span>:
+                            <code>110.680 MB</code>
+                        </p>
+                        <div class="sha-256" onclick="copyToClipboard(this)" title="Click to copy">
+                            c8722f2ae2d56e68740ac09e9094ccea456eb421fed3abd346646b6247888242
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <a href="https://edgedl/release2/chrome/pqvde2dmrwfww7to4gdnu6ggre_131.0.6778.13/131.0.6778.13_chrome_installer.exe" class="btn btn-primary" download>
+                            <span lang="zh">下载</span>
+                            <span lang="en">Download</span>
+                        </a>
+                        <a href="https://release2/chrome/pqvde2dmrwfww7to4gdnu6ggre_131.0.6778.13/131.0.6778.13_chrome_installer.exe" class="btn" download>
+                            <span lang="zh">备选地址</span>
+                            <span lang="en">Mirror</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dev Section -->
+        <section id="dev">
+            <h2>
+                <span lang="zh">开发版</span>
+                <span lang="en">Dev Version</span>
+            </h2>
+            <div class="grid">
+                <!-- Dev x86 Card -->
+                <div class="card">
+                    <div class="version-info">
+                        <h3>Dev 32-bit <small>132.0.6793.2</small></h3>
+                        <p>
+                            <span lang="zh">文件大小</span>
+                            <span lang="en">File size</span>:
+                            <code>99.195 MB</code>
+                        </p>
+                        <div class="sha-256" onclick="copyToClipboard(this)" title="Click to copy">
+                            6de5897a3d1cc8cfe8778e2946fe7534a6256902b0291268f168656e63a926f5
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <a href="https://edgedl/release2/chrome/nza7m42a3nl6km2xtfccrxvkpi_132.0.6793.2/132.0.6793.2_chrome_installer.exe" class="btn btn-warning" download>
+                            <span lang="zh">下载</span>
+                            <span lang="en">Download</span>
+                        </a>
+                        <a href="https://release2/chrome/nza7m42a3nl6km2xtfccrxvkpi_132.0.6793.2/132.0.6793.2_chrome_installer.exe" class="btn" download>
+                            <span lang="zh">备选地址</span>
+                            <span lang="en">Mirror</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dev x64 Card -->
+                <div class="card">
+                    <div class="version-info">
+                        <h3>Dev 64-bit <small>132.0.6793.2</small></h3>
+                        <p>
+                            <span lang="zh">文件大小</span>
+                            <span lang="en">File size</span>:
+                            <code>110.715 MB</code>
+                        </p>
+                        <div class="sha-256" onclick="copyToClipboard(this)" title="Click to copy">
+                            d8608a0f69b605765e0e024311bc784a32018172982cabd8aa9643d2ec1c1065
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <a href="https://edgedl/release2/chrome/mpggqpytxyyc6tj3baqydvlfvq_132.0.6793.2/132.0.6793.2_chrome_installer.exe" class="btn btn-warning" download>
+                            <span lang="zh">下载</span>
+                            <span lang="en">Download</span>
+                        </a>
+                        <a href="https://release2/chrome/mpggqpytxyyc6tj3baqydvlfvq_132.0.6793.2/132.0.6793.2_chrome_installer.exe" class="btn" download>
+                            <span lang="zh">备选地址</span>
+                            <span lang="en">Mirror</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Canary Section -->
+        <section id="canary">
+            <h2>
+                <span lang="zh">金丝雀版</span>
+                <span lang="en">Canary Version</span>
+            </h2>
+            <div class="grid">
+                <!-- Canary x86 Card -->
+                <div class="card">
+                    <div class="version-info">
+                        <h3>Canary 32-bit <small>132.0.6800.0</small></h3>
+                        <p>
+                            <span lang="zh">文件大小</span>
+                            <span lang="en">File size</span>:
+                            <code>99.252 MB</code>
+                        </p>
+                        <div class="sha-256" onclick="copyToClipboard(this)" title="Click to copy">
+                            ae7f9bd46184cc7a733bd1bdd84a7ddfc53d1f6edee241aebcffffa09e86cc5e
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <a href="https://edgedl/release2/chrome/n2suk4qrduc6z5vazxsn4d66ga_132.0.6800.0/132.0.6800.0_chrome_installer.exe" class="btn btn-warning" download>
+                            <span lang="zh">下载</span>
+                            <span lang="en">Download</span>
+                        </a>
+                        <a href="https://release2/chrome/n2suk4qrduc6z5vazxsn4d66ga_132.0.6800.0/132.0.6800.0_chrome_installer.exe" class="btn" download>
+                            <span lang="zh">备选地址</span>
+                            <span lang="en">Mirror</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Canary x64 Card -->
+                <div class="card">
+                    <div class="version-info">
+                        <h3>Canary 64-bit <small>132.0.6800.0</small></h3>
+                        <p>
+                            <span lang="zh">文件大小</span>
+                            <span lang="en">File size</span>:
+                            <code>110.799 MB</code>
+                        </p>
+                        <div class="sha-256" onclick="copyToClipboard(this)" title="Click to copy">
+                            1564155d0ef67ba7fc6448a9aa9410c49354c567c06aa1218b7822e0cc48365e
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <a href="https://edgedl/release2/chrome/eikuy6cyvomxufkhqwtxj6rxs4_132.0.6800.0/132.0.6800.0_chrome_installer.exe" class="btn btn-warning" download>
+                            <span lang="zh">下载</span>
+                            <span lang="en">Download</span>
+                        </a>
+                        <a href="https://release2/chrome/eikuy6cyvomxufkhqwtxj6rxs4_132.0.6800.0/132.0.6800.0_chrome_installer.exe" class="btn" download>
+                            <span lang="zh">备选地址</span>
+                            <span lang="en">Mirror</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="notice warning">
+            <h2>
+                <span lang="zh">开源信息</span>
+                <span lang="en">Open Source Info</span>
+            </h2>
             <p>
-                <a href="#stable">Stable 稳定版</a>&nbsp;|&nbsp;<!--
-             --><a href="#beta">Beta 测试版</a>&nbsp;|&nbsp;<!--
-             --><a href="#dev">Dev 开发版</a>&nbsp;|&nbsp;<!--
-             --><a href="#canary">Canary 金丝雀</a>
+                <a href="https://github.com/Lutra-Fs/CheckChrome" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
             </p>
-        </div>
-        <div id="stable" class="row">
-            <div class="col-sm-6 sk-pt-5">
-                <div class="sk-shadow-1 sk-p-5">
-                    <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Stable 稳定版 32 位&nbsp;&nbsp;
-                        <small>130.0.6723.70</small>
-                    </h4>
-                    <hr class="sk-mt-0 sk-mb-3">
-                    <p class="sk-mb-1">
-                        <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>98.485 MB</code>
-                    </p>
-                    <p>
-                        <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">0e8bc63c332260e2a9a648569d76383833da4a3f1d4db63ae75f91b6f974589b</pre>
-                    </p>
-                    <div class="btn-group sk-mt-3" role="group">
-                        <a href="https://edgedl/release2/chrome/acawua43qdcszeqhgksfb55bia_130.0.6723.70/130.0.6723.70_chrome_installer.exe" class="btn btn-success">
-                            <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
-                            <span>点击下载</span>
-                        </a>
-                        <a href="https://release2/chrome/acawua43qdcszeqhgksfb55bia_130.0.6723.70/130.0.6723.70_chrome_installer.exe" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="http://101.96.9.133/release2/chrome/acawua43qdcszeqhgksfb55bia_130.0.6723.70/130.0.6723.70_chrome_installer.exe" class="btn btn-default">缓存服务器</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 sk-pt-5">
-                <div class="sk-shadow-1 sk-p-5">
-                    <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Stable 稳定版 64 位&nbsp;&nbsp;
-                        <small>130.0.6723.70</small>
-                    </h4>
-                    <hr class="sk-mt-0 sk-mb-3">
-                    <p class="sk-mb-1">
-                        <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>110.136 MB</code>
-                    </p>
-                    <p>
-                        <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">95af56889eeb7c012af7e775a2f05b6b3a5cc157efdde6309a3cb94ffb39ff87</pre>
-                    </p>
-                    <div class="btn-group sk-mt-3" role="group">
-                        <a href="https://edgedl/release2/chrome/gp4euzff246fspqt6uwnrqmx6y_130.0.6723.70/130.0.6723.70_chrome_installer.exe" class="btn btn-success">
-                            <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
-                            <span>点击下载</span>
-                        </a>
-                        <a href="https://release2/chrome/gp4euzff246fspqt6uwnrqmx6y_130.0.6723.70/130.0.6723.70_chrome_installer.exe" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="http://101.96.9.133/release2/chrome/gp4euzff246fspqt6uwnrqmx6y_130.0.6723.70/130.0.6723.70_chrome_installer.exe" class="btn btn-default">缓存服务器</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row" id="beta">
-            <div class="col-sm-6 sk-pt-5">
-                <div class="sk-shadow-1 sk-p-5">
-                    <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Beta 测试版 32 位&nbsp;&nbsp;
-                        <small>131.0.6778.13</small>
-                    </h4>
-                    <hr class="sk-mt-0 sk-mb-3">
-                    <p class="sk-mb-1">
-                        <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>98.919 MB</code>
-                    </p>
-                    <p>
-                        <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">26883d894b968d5adc235a3c72eeace1958cc2e0036d3fe0beff290ea89fd33a</pre>
-                    </p>
-                    <div class="btn-group sk-mt-3" role="group">
-                        <a href="https://edgedl/release2/chrome/frurpu3cdoafz43rg5nasds4oq_131.0.6778.13/131.0.6778.13_chrome_installer.exe" class="btn btn-primary">
-                            <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
-                            <span>点击下载</span>
-                        </a>
-                        <a href="https://release2/chrome/frurpu3cdoafz43rg5nasds4oq_131.0.6778.13/131.0.6778.13_chrome_installer.exe" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="http://101.96.9.133/release2/chrome/frurpu3cdoafz43rg5nasds4oq_131.0.6778.13/131.0.6778.13_chrome_installer.exe" class="btn btn-default">缓存服务器</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 sk-pt-5">
-                <div class="sk-shadow-1 sk-p-5">
-                    <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Beta 测试版 64 位&nbsp;&nbsp;
-                        <small>131.0.6778.13</small>
-                    </h4>
-                    <hr class="sk-mt-0 sk-mb-3">
-                    <p class="sk-mb-1">
-                        <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>110.680 MB</code>
-                    </p>
-                    <p>
-                        <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">c8722f2ae2d56e68740ac09e9094ccea456eb421fed3abd346646b6247888242</pre>
-                    </p>
-                    <div class="btn-group sk-mt-3" role="group">
-                        <a href="https://edgedl/release2/chrome/pqvde2dmrwfww7to4gdnu6ggre_131.0.6778.13/131.0.6778.13_chrome_installer.exe" class="btn btn-primary">
-                            <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
-                            <span>点击下载</span>
-                        </a>
-                        <a href="https://release2/chrome/pqvde2dmrwfww7to4gdnu6ggre_131.0.6778.13/131.0.6778.13_chrome_installer.exe" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="http://101.96.9.133/release2/chrome/pqvde2dmrwfww7to4gdnu6ggre_131.0.6778.13/131.0.6778.13_chrome_installer.exe" class="btn btn-default">缓存服务器</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row" id="dev">
-            <div class="col-sm-6 sk-pt-5">
-                <div class="sk-shadow-1 sk-p-5">
-                    <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Dev 开发版 32 位&nbsp;&nbsp;
-                        <small>132.0.6793.2</small>
-                    </h4>
-                    <hr class="sk-mt-0 sk-mb-3">
-                    <p class="sk-mb-1">
-                        <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>99.195 MB</code>
-                    </p>
-                    <p>
-                        <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">6de5897a3d1cc8cfe8778e2946fe7534a6256902b0291268f168656e63a926f5</pre>
-                    </p>
-                    <div class="btn-group sk-mt-3" role="group">
-                        <a href="https://edgedl/release2/chrome/nza7m42a3nl6km2xtfccrxvkpi_132.0.6793.2/132.0.6793.2_chrome_installer.exe" class="btn btn-warning">
-                            <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
-                            <span>点击下载</span>
-                        </a>
-                        <a href="https://release2/chrome/nza7m42a3nl6km2xtfccrxvkpi_132.0.6793.2/132.0.6793.2_chrome_installer.exe" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="http://101.96.9.133/release2/chrome/nza7m42a3nl6km2xtfccrxvkpi_132.0.6793.2/132.0.6793.2_chrome_installer.exe" class="btn btn-default">缓存服务器</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 sk-pt-5">
-                <div class="sk-shadow-1 sk-p-5">
-                    <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Dev 开发版 64 位&nbsp;&nbsp;
-                        <small>132.0.6793.2</small>
-                    </h4>
-                    <hr class="sk-mt-0 sk-mb-3">
-                    <p class="sk-mb-1">
-                        <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>110.715 MB</code>
-                    </p>
-                    <p>
-                        <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">d8608a0f69b605765e0e024311bc784a32018172982cabd8aa9643d2ec1c1065</pre>
-                    </p>
-                    <div class="btn-group sk-mt-3" role="group">
-                        <a href="https://edgedl/release2/chrome/mpggqpytxyyc6tj3baqydvlfvq_132.0.6793.2/132.0.6793.2_chrome_installer.exe" class="btn btn-warning">
-                            <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
-                            <span>点击下载</span>
-                        </a>
-                        <a href="https://release2/chrome/mpggqpytxyyc6tj3baqydvlfvq_132.0.6793.2/132.0.6793.2_chrome_installer.exe" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="http://101.96.9.133/release2/chrome/mpggqpytxyyc6tj3baqydvlfvq_132.0.6793.2/132.0.6793.2_chrome_installer.exe" class="btn btn-default">缓存服务器</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row" id="canary">
-            <div class="col-sm-6 sk-pt-5">
-                <div class="sk-shadow-1 sk-p-5">
-                    <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Canary 金丝雀 32 位&nbsp;&nbsp;
-                        <small>132.0.6800.0</small>
-                    </h4>
-                    <hr class="sk-mt-0 sk-mb-3">
-                    <p class="sk-mb-1">
-                        <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>99.252 MB</code>
-                    </p>
-                    <p>
-                        <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">ae7f9bd46184cc7a733bd1bdd84a7ddfc53d1f6edee241aebcffffa09e86cc5e</pre>
-                    </p>
-                    <div class="btn-group sk-mt-3" role="group">
-                        <a href="https://edgedl/release2/chrome/n2suk4qrduc6z5vazxsn4d66ga_132.0.6800.0/132.0.6800.0_chrome_installer.exe" class="btn btn-danger">
-                            <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
-                            <span>点击下载</span>
-                        </a>
-                        <a href="https://release2/chrome/n2suk4qrduc6z5vazxsn4d66ga_132.0.6800.0/132.0.6800.0_chrome_installer.exe" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="http://101.96.9.133/release2/chrome/n2suk4qrduc6z5vazxsn4d66ga_132.0.6800.0/132.0.6800.0_chrome_installer.exe" class="btn btn-default">缓存服务器</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 sk-pt-5">
-                <div class="sk-shadow-1 sk-p-5">
-                    <h4 class="sk-mt-0 sk-mb-3 sk-text-bold">Canary 金丝雀 64 位&nbsp;&nbsp;
-                        <small>132.0.6800.0</small>
-                    </h4>
-                    <hr class="sk-mt-0 sk-mb-3">
-                    <p class="sk-mb-1">
-                        <span class="sk-text-bold">文件大小</span>&nbsp;&nbsp;
-                        <code>110.799 MB</code>
-                    </p>
-                    <p>
-                        <span class="sk-fl sk-pr-3 sk-pt-3 sk-text-bold">SHA256</span>
-                        <pre class="sk-p-1 sk-text-uppercase sha-256">1564155d0ef67ba7fc6448a9aa9410c49354c567c06aa1218b7822e0cc48365e</pre>
-                    </p>
-                    <div class="btn-group sk-mt-3" role="group">
-                        <a href="https://edgedl/release2/chrome/eikuy6cyvomxufkhqwtxj6rxs4_132.0.6800.0/132.0.6800.0_chrome_installer.exe" class="btn btn-danger">
-                            <i class="glyphicon glyphicon-save" aria-hidden="true"></i>
-                            <span>点击下载</span>
-                        </a>
-                        <a href="https://release2/chrome/eikuy6cyvomxufkhqwtxj6rxs4_132.0.6800.0/132.0.6800.0_chrome_installer.exe" class="btn btn-default sk-bg-gray">备选地址</a>
-                        <a href="http://101.96.9.133/release2/chrome/eikuy6cyvomxufkhqwtxj6rxs4_132.0.6800.0/132.0.6800.0_chrome_installer.exe" class="btn btn-default">缓存服务器</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bs-callout bs-callout-danger sk-shadow-1 sk-mt-5">
-            <h4 class="sk-mb-4">注意</h4>
-            <h5 class="sk-text-bold">项目开源地址</h5>
+            <h3>API (XML)</h3>
             <p>
-                <a href="https://github.com/SukkaW/ChromeChecker" target="_blank" rel="noopener noreferrer">https://github.com/SukkaW/ChromeChecker</a>
+                <a href="https://lutra-fs.github.io/CheckChrome/api/chrome.xml" target="_blank" rel="noopener noreferrer">chrome.xml</a>
+                <span lang="zh">（未压缩）</span>
+                <span lang="en">(Uncompressed)</span>
+                <br>
+                <a href="https://lutra-fs.github.io/CheckChrome/api/chrome.min.xml" target="_blank" rel="noopener noreferrer">chrome.min.xml</a>
+                <span lang="zh">（已压缩）</span>
+                <span lang="en">(Compressed)</span>
             </p>
-            <h5 class="sk-text-bold">API（XML 格式）</h5>
-            <p>
-                <a href="https://chrome-dl.com/api/chrome.xml" target="_blank" rel="noopener noreferrer">https://chrome-dl.com/api/chrome.xml</a>（未压缩）<br>
-                <a href="https://chrome-dl.com/api/chrome.min.xml" target="_blank" rel="noopener noreferrer">https://chrome-dl.com/api/chrome.min.xml</a>（已压缩）
-            </p>
-            <blockquote class="sk-mb-0">对于需要 Chrome 离线包数据，请使用本站开放的 API，<b>完全没有必要</b> 用 iframe 嵌套或反代本站，或者用爬虫解析本站 HTML 来获取数据。</blockquote>
         </div>
     </div>
-    <script>
-        window.ga_tid = "UA-122669675-6";
-        window.ga_api = "https://d.skk.moe/p/";
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/cfga@1.0.1" async></script>
-    <script>
-        (function () {
-            function perfops() {
-                var js = document.createElement('script');
-                js.src = 'https://cdn.jsdelivr.net/npm/perfops-rom';
-                document.body.appendChild(js);
-            }
 
-            if (document.readyState === 'complete') {
-                perfops();
-            } else {
-                window.addEventListener('load', perfops);
-            }
-        })();
+    <script>
+        // Language switching
+        function toggleLanguage() {
+            const currentLang = document.body.getAttribute('data-lang');
+            const newLang = currentLang === 'zh' ? 'en' : 'zh';
+            document.body.setAttribute('data-lang', newLang);
+            localStorage.setItem('preferred-language', newLang);
+        }
+
+        // Theme switching
+        function toggleTheme() {
+            const currentTheme = document.body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('preferred-theme', newTheme);
+        }
+
+        // Copy SHA256 to clipboard
+        function copyToClipboard(element) {
+            const text = element.textContent.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                element.style.backgroundColor = 'rgba(0, 255, 0, 0.1)';
+                setTimeout(() => {
+                    element.style.backgroundColor = '';
+                }, 500);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+
+        // Initialize preferences
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set language based on preference or browser language
+            const preferredLang = localStorage.getItem('preferred-language') 
+                || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+            document.body.setAttribute('data-lang', preferredLang);
+
+            // Set theme based on preference or system preference
+            const preferredTheme = localStorage.getItem('preferred-theme') 
+                || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.body.setAttribute('data-theme', preferredTheme);
+        });
     </script>
 </body>
-
 </html>
