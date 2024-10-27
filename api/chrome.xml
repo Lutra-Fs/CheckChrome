@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2024-10-27 13:27:54</time>
+  <time>2024-10-27 13:28:34</time>
   <stable32>
     <version>130.0.6723.70</version>
     <download>
@@ -56,13 +56,13 @@
     <size>116092784</size>
   </dev64>
   <canary32>
-    <version>132.0.6800.0</version>
+    <version>132.0.6800.1</version>
     <download>
-      <url>https://edgedl/release2/chrome/n2suk4qrduc6z5vazxsn4d66ga_132.0.6800.0/132.0.6800.0_chrome_installer.exe</url>
-      <url>https://release2/chrome/n2suk4qrduc6z5vazxsn4d66ga_132.0.6800.0/132.0.6800.0_chrome_installer.exe</url>
+      <url>https://edgedl/release2/chrome/acpbd7glxvn4wseijl7zqgy2urga_132.0.6800.1/132.0.6800.1_chrome_installer.exe</url>
+      <url>https://release2/chrome/acpbd7glxvn4wseijl7zqgy2urga_132.0.6800.1/132.0.6800.1_chrome_installer.exe</url>
     </download>
-    <sha256>ae7f9bd46184cc7a733bd1bdd84a7ddfc53d1f6edee241aebcffffa09e86cc5e</sha256>
-    <size>104073584</size>
+    <sha256>10b2e2510448cba752b9514ed747e38bab814afa6817a1320b3d40057667034f</sha256>
+    <size>122605936</size>
   </canary32>
   <canary64>
     <version>132.0.6800.0</version>
