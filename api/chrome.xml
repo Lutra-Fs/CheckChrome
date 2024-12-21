@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2024-12-20 13:39:36</time>
+  <time>2024-12-21 13:38:17</time>
   <stable32>
     <version>131.0.6778.205</version>
     <download>
@@ -38,39 +38,39 @@
     <size>116606320</size>
   </beta64>
   <dev32>
-    <version>133.0.6888.2</version>
+    <version>133.0.6905.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/aditz7vp4pvez4l7axuk3pwds2ba_133.0.6888.2/133.0.6888.2_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/aditz7vp4pvez4l7axuk3pwds2ba_133.0.6888.2/133.0.6888.2_chrome_installer.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/kpwaafkehrzijrtw47fjyrfunu_133.0.6905.0/133.0.6905.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/kpwaafkehrzijrtw47fjyrfunu_133.0.6905.0/133.0.6905.0_chrome_installer.exe</url>
     </download>
-    <sha256>ce3edf3e45df403307348e0246a07c5e11265b8f6e9251c212a3868155b18857</sha256>
-    <size>106247024</size>
+    <sha256>549465b56e173fd0c308fd44e3b175fb9519ef6859e4dc78e0babf4f361412e3</sha256>
+    <size>106356592</size>
   </dev32>
   <dev64>
-    <version>133.0.6888.2</version>
+    <version>133.0.6905.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/ac5axp7zrv3sym7qvkalep4ffxwq_133.0.6888.2/133.0.6888.2_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/ac5axp7zrv3sym7qvkalep4ffxwq_133.0.6888.2/133.0.6888.2_chrome_installer.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/ad3ozjqhvhqjrgc54qjmhpalrc7a_133.0.6905.0/133.0.6905.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/ad3ozjqhvhqjrgc54qjmhpalrc7a_133.0.6905.0/133.0.6905.0_chrome_installer.exe</url>
     </download>
-    <sha256>3cfdacb566c83975790d4d507ed835bd37b553bfdef66239e947cf158bd81a99</sha256>
-    <size>118855024</size>
+    <sha256>baebfc58f3d1e6d0c45c667701f1d2831556e9c629cf23e1d1ef76af76dbe309</sha256>
+    <size>118966640</size>
   </dev64>
   <canary32>
-    <version>133.0.6906.0</version>
+    <version>133.0.6908.1</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/acimzpthdalzladdvefypsdoxmka_133.0.6906.0/133.0.6906.0_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/acimzpthdalzladdvefypsdoxmka_133.0.6906.0/133.0.6906.0_chrome_installer.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/ad4fuboym2r73bohqnxrplczh2qq_133.0.6908.1/133.0.6908.1_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/ad4fuboym2r73bohqnxrplczh2qq_133.0.6908.1/133.0.6908.1_chrome_installer.exe</url>
     </download>
-    <sha256>57114568ed9d31a5003eba2c4ee2d6c0f4213e03c7b8974e5e8cb62c19dd4b47</sha256>
-    <size>106429296</size>
+    <sha256>78f808bc9c8d770d4e05d27cc56c6d2d4fc30b4115bab7b778f83ba0cab45aa6</sha256>
+    <size>124896112</size>
   </canary32>
   <canary64>
-    <version>133.0.6906.0</version>
+    <version>133.0.6908.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/acfelucrvdjvl2uygvdmvu6ttoma_133.0.6906.0/133.0.6906.0_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/acfelucrvdjvl2uygvdmvu6ttoma_133.0.6906.0/133.0.6906.0_chrome_installer.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/adonnqbrc47ili66zqbv7c5ahfta_133.0.6908.0/133.0.6908.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/adonnqbrc47ili66zqbv7c5ahfta_133.0.6908.0/133.0.6908.0_chrome_installer.exe</url>
     </download>
-    <sha256>db70cbd54b27fd68f41b40ea1ebbcbe83d373f775e0518e3c132beee67b56312</sha256>
-    <size>118996336</size>
+    <sha256>b75bdee91fba64f12fb89c909ad89a9e9418c5896d94f2278bfbe7ccb2b30df2</sha256>
+    <size>118639984</size>
   </canary64>
 </chromechecker>
