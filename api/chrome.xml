@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2025-03-06 13:41:41</time>
+  <time>2025-03-07 13:40:00</time>
   <stable32>
     <version>134.0.6998.36</version>
     <download>
@@ -56,21 +56,21 @@
     <size>120248176</size>
   </dev64>
   <canary32>
-    <version>136.0.7051.0</version>
+    <version>136.0.7053.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/ac2lbj4javy5mqtzwvwpqwig47va_136.0.7051.0/136.0.7051.0_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/ac2lbj4javy5mqtzwvwpqwig47va_136.0.7051.0/136.0.7051.0_chrome_installer.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/adbslahppv52kqcpjle253b4hoya_136.0.7053.0/136.0.7053.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/adbslahppv52kqcpjle253b4hoya_136.0.7053.0/136.0.7053.0_chrome_installer.exe</url>
     </download>
-    <sha256>7ad52e8d86c5f238a654361bbe07ab7e70dbe62370d0d3ec29b19908e3344d6e</sha256>
-    <size>107649392</size>
+    <sha256>e11d6a0bfce390347cc1cb831fcf83a01521dabf4c06fccac4ec92a73bbe54bf</sha256>
+    <size>107703664</size>
   </canary32>
   <canary64>
-    <version>136.0.7051.0</version>
+    <version>136.0.7053.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/ac4244ayjuq75e4sf4xnjrkv5era_136.0.7051.0/136.0.7051.0_chrome_installer.exe</url>
-      <url>https://dl.google.com/release2/chrome/ac4244ayjuq75e4sf4xnjrkv5era_136.0.7051.0/136.0.7051.0_chrome_installer.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/ppdy5wdqur6efdsqzihw5uvxsm_136.0.7053.0/136.0.7053.0_chrome_installer.exe</url>
+      <url>https://dl.google.com/release2/chrome/ppdy5wdqur6efdsqzihw5uvxsm_136.0.7053.0/136.0.7053.0_chrome_installer.exe</url>
     </download>
-    <sha256>2cacba6161744f41f1c1e38acd9d1ff7c48d51b1527da49d27aad4a429e3bba2</sha256>
-    <size>120360304</size>
+    <sha256>ab1df6355bb1adf0ed040123f6105e1d65c2249a6e917e89329d98787a2e5525</sha256>
+    <size>120417136</size>
   </canary64>
 </chromechecker>
