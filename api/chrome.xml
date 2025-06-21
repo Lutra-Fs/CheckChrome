@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2025-06-20 13:44:34</time>
+  <time>2025-06-21 13:42:40</time>
   <stable32>
     <version>137.0.7151.120</version>
     <download>
@@ -38,39 +38,39 @@
     <size>422344616</size>
   </beta64>
   <dev32>
-    <version>139.0.7232.3</version>
+    <version>139.0.7246.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/i55std5fl4pvkqnuhhicxglsy4_139.0.7232.3/139.0.7232.3_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/i55std5fl4pvkqnuhhicxglsy4_139.0.7232.3/139.0.7232.3_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/acyphcqnu4mqhjievdyvdqktjsua_139.0.7246.0/139.0.7246.0_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/acyphcqnu4mqhjievdyvdqktjsua_139.0.7246.0/139.0.7246.0_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>fc562048fe538206fdefbd5a6b4823f72e57d1021d07b6ad21251c4b5b405375</sha256>
-    <size>349504424</size>
+    <sha256>7c1e0ce6720a27385b410650ec128afdcb60efdeb8ed330475f4e772ff067fc5</sha256>
+    <size>350589864</size>
   </dev32>
   <dev64>
-    <version>139.0.7232.3</version>
+    <version>139.0.7246.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/opp7psapop5c23uu7iayolhtf4_139.0.7232.3/139.0.7232.3_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/opp7psapop5c23uu7iayolhtf4_139.0.7232.3/139.0.7232.3_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/cefiufctqup7ot7bijmemcw3ju_139.0.7246.0/139.0.7246.0_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/cefiufctqup7ot7bijmemcw3ju_139.0.7246.0/139.0.7246.0_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>4bdbdf3bb0be2209ff0de20bcf6f5e5ee16e64bc9f6451652eecdc5bcb1fadb9</sha256>
-    <size>424951720</size>
+    <sha256>ee51edf37edc7b84f734e2a9cd556917e0409d315b6ec80d827f5ecf0c46d28c</sha256>
+    <size>426174888</size>
   </dev64>
   <canary32>
-    <version>139.0.7249.0</version>
+    <version>139.0.7251.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/acsdrxry7mb6rukvr2pozwndkjga_139.0.7249.0/139.0.7249.0_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/acsdrxry7mb6rukvr2pozwndkjga_139.0.7249.0/139.0.7249.0_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/ppkvky7mbw4dfhuk2vxml2qgyu_139.0.7251.0/139.0.7251.0_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/ppkvky7mbw4dfhuk2vxml2qgyu_139.0.7251.0/139.0.7251.0_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>f2dbf32ea2ba85ac0f78c700e1acd21cf9da15e709d919338ab06af050c108cb</sha256>
-    <size>348932008</size>
+    <sha256>ec0ca5f9fdeae3a6a170261b78537ad4dedd220ec06ced98f5017ce359c22f9b</sha256>
+    <size>350540656</size>
   </canary32>
   <canary64>
-    <version>139.0.7249.0</version>
+    <version>139.0.7251.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/hj2k6e6ioop4fhxtd2kwrmbwba_139.0.7249.0/139.0.7249.0_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/hj2k6e6ioop4fhxtd2kwrmbwba_139.0.7249.0/139.0.7249.0_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/larzwdp7xqk6xjsh6ng5icdal4_139.0.7251.0/139.0.7251.0_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/larzwdp7xqk6xjsh6ng5icdal4_139.0.7251.0/139.0.7251.0_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>7c24b31e58eaf20b48d7979f5ced39f105e6d4efc92a94f012e92921e1fc8b6c</sha256>
-    <size>426513832</size>
+    <sha256>1a769840719f1e938dfa86acd463fccf1f300af215bb92f4d08f1caf028d6056</sha256>
+    <size>425473904</size>
   </canary64>
 </chromechecker>
