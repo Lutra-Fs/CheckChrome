@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2025-10-12 13:38:55</time>
+  <time>2025-10-13 13:41:58</time>
   <stable32>
     <version>141.0.7390.77</version>
     <download>
@@ -38,39 +38,39 @@
     <size>440022440</size>
   </beta64>
   <dev32>
-    <version>143.0.7461.2</version>
+    <version>143.0.7461.3</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/adzopiwd5mhyrsu32lce7rmrutvq_143.0.7461.2/143.0.7461.2_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/adzopiwd5mhyrsu32lce7rmrutvq_143.0.7461.2/143.0.7461.2_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/adsxrunkvbivxsagqlwlfilnieeq_143.0.7461.3/143.0.7461.3_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/adsxrunkvbivxsagqlwlfilnieeq_143.0.7461.3/143.0.7461.3_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>96dfff282bbd2e2805b4e9a911efe8fc5101f6712be5d0ee0c41b0cbb7223ccb</sha256>
-    <size>366585256</size>
+    <sha256>2609c859586d29c2bc9bcaea925668358afea9fd25ca058a83eb281c3755c82b</sha256>
+    <size>366586792</size>
   </dev32>
   <dev64>
-    <version>143.0.7461.2</version>
+    <version>143.0.7461.3</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/adyrqbrlezwssflprd3yz2dqmhpa_143.0.7461.2/143.0.7461.2_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/adyrqbrlezwssflprd3yz2dqmhpa_143.0.7461.2/143.0.7461.2_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/adnuflp4hkkhmkfduiwxmdxc3dqq_143.0.7461.3/143.0.7461.3_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/adnuflp4hkkhmkfduiwxmdxc3dqq_143.0.7461.3/143.0.7461.3_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>38a6dab88580441f43c123a35cac0e28b0a13f4abe249456c17b9f269e1678a7</sha256>
+    <sha256>525b8ecff925db609b84753c928a54b6e003b6c75a4c4b9b6b1274e7ace686f0</sha256>
     <size>442244520</size>
   </dev64>
   <canary32>
-    <version>143.0.7466.0</version>
+    <version>143.0.7467.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/io5alnmaxmu7p64ko26hsylazq_143.0.7466.0/143.0.7466.0_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/io5alnmaxmu7p64ko26hsylazq_143.0.7466.0/143.0.7466.0_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/nzvbbbdz7l6qj2v3u64heejvni_143.0.7467.0/143.0.7467.0_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/nzvbbbdz7l6qj2v3u64heejvni_143.0.7467.0/143.0.7467.0_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>684ffc21a3b03b4bf5be696bfbc00b2291f37a1afceeea9ed94171d8f32daa56</sha256>
-    <size>366068648</size>
+    <sha256>038ffef59b92af1a9e437f258948c6d0ac8ce2342d0235685448964688cdef4a</sha256>
+    <size>364179368</size>
   </canary32>
   <canary64>
-    <version>143.0.7466.0</version>
+    <version>143.0.7467.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/f7bkvnttmxd6h234uyuxig7yca_143.0.7466.0/143.0.7466.0_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/f7bkvnttmxd6h234uyuxig7yca_143.0.7466.0/143.0.7466.0_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/ad3gren7sfnjj5pybzpehcwcpfaq_143.0.7467.0/143.0.7467.0_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/ad3gren7sfnjj5pybzpehcwcpfaq_143.0.7467.0/143.0.7467.0_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>78bfdb301b0b1aa90bb1fa67eb4a7cd45bf54b3bb25bf8158f97c926ee99a6cc</sha256>
-    <size>439880104</size>
+    <sha256>b2cead7b86b5a1a2aa8165202418cea925aa4924f4f09af52843acb2ea052e20</sha256>
+    <size>440125864</size>
   </canary64>
 </chromechecker>
