@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2025-11-09 13:40:29</time>
+  <time>2025-11-10 13:42:37</time>
   <stable32>
     <version>142.0.7444.135</version>
     <download>
@@ -38,39 +38,39 @@
     <size>441855912</size>
   </beta64>
   <dev32>
-    <version>144.0.7512.3</version>
+    <version>144.0.7512.4</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/aduvhp3v7hq3r2gflslmv6kz6n3q_144.0.7512.3/144.0.7512.3_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/aduvhp3v7hq3r2gflslmv6kz6n3q_144.0.7512.3/144.0.7512.3_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/ad5tgpxeurjwdl7cjndbrgu6bjtq_144.0.7512.4/144.0.7512.4_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/ad5tgpxeurjwdl7cjndbrgu6bjtq_144.0.7512.4/144.0.7512.4_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>bf9c724a0bc4416de9206e1a514859249693230e075eaeddb53e1f5b782d8a49</sha256>
+    <sha256>81df978b52b1b00786a1699f4a906573c9df37aa72184c3c6c32ca73b87b6b81</sha256>
     <size>368061352</size>
   </dev32>
   <dev64>
-    <version>144.0.7512.3</version>
+    <version>144.0.7512.4</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/p2rlxdfba4evw5jw7b6gynob4q_144.0.7512.3/144.0.7512.3_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/p2rlxdfba4evw5jw7b6gynob4q_144.0.7512.3/144.0.7512.3_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/achv7z2mwxluprdqaxx7si6ou3sa_144.0.7512.4/144.0.7512.4_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/achv7z2mwxluprdqaxx7si6ou3sa_144.0.7512.4/144.0.7512.4_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>606986c168f10edf891b38367acf0f7b772cb583d60805644258aa1b4212b516</sha256>
-    <size>442955688</size>
+    <sha256>2a6e3830095ac26c36f8300907348235437fb0253fdec32be34fb5cf01889cfe</sha256>
+    <size>442956200</size>
   </dev64>
   <canary32>
-    <version>144.0.7517.0</version>
+    <version>144.0.7519.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/adx5lkxbxpgg6y6hfzerm2lzjzbq_144.0.7517.0/144.0.7517.0_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/adx5lkxbxpgg6y6hfzerm2lzjzbq_144.0.7517.0/144.0.7517.0_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/adz25igd5hbd3e2b4e5yd3tfnwba_144.0.7519.0/144.0.7519.0_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/adz25igd5hbd3e2b4e5yd3tfnwba_144.0.7519.0/144.0.7519.0_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>6cd033b3faa9a4ad34c037616168d61897fcd5aafcf2f97e3e1e4b68b250d3e8</sha256>
-    <size>366423464</size>
+    <sha256>a9f16a41a1bac59f10a7ae1f4380dcc8e1f2d47fcc1bea11b12881f2cbc3607c</sha256>
+    <size>367051176</size>
   </canary32>
   <canary64>
-    <version>144.0.7517.0</version>
+    <version>144.0.7519.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/acgxcvlqc4rujbylsfvietfsfbna_144.0.7517.0/144.0.7517.0_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/acgxcvlqc4rujbylsfvietfsfbna_144.0.7517.0/144.0.7517.0_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/kgjsaiw4nodnaxkvgz24qpa25u_144.0.7519.0/144.0.7519.0_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/kgjsaiw4nodnaxkvgz24qpa25u_144.0.7519.0/144.0.7519.0_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>773548af641b5076bbd4f184c10f9c66d0afb92f6e265e3f47164c6be526b949</sha256>
-    <size>443020200</size>
+    <sha256>08dcdebd3ae5e0e61a9f8b316c614c49366cc093741896634b6a91ce28904ac3</sha256>
+    <size>442308008</size>
   </canary64>
 </chromechecker>
