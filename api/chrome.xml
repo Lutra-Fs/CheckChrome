@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2026-01-04 13:48:20</time>
+  <time>2026-01-05 13:56:30</time>
   <stable32>
     <version>143.0.7499.170</version>
     <download>
@@ -65,12 +65,12 @@
     <size>371833256</size>
   </canary32>
   <canary64>
-    <version>145.0.7615.1</version>
+    <version>145.0.7615.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/m3egsz5mque2dqbbyr4bwxk2zi_145.0.7615.1/145.0.7615.1_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/m3egsz5mque2dqbbyr4bwxk2zi_145.0.7615.1/145.0.7615.1_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/o7enoivbwl62lnwwhwhqgig35i_145.0.7615.0/145.0.7615.0_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/o7enoivbwl62lnwwhwhqgig35i_145.0.7615.0/145.0.7615.0_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>8b0949460bad2ea54612eb7c1b9601623ffe9944f611f2662d4f90d217d90304</sha256>
-    <size>667693992</size>
+    <sha256>362b0cc3304dec963986fe6daddd959dab001a22207092d35f67beab448bc628</sha256>
+    <size>449448360</size>
   </canary64>
 </chromechecker>
