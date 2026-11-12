@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <chromechecker>
-  <time>2026-11-11 20:53:20</time>
+  <time>2026-11-12 21:55:54</time>
   <stable32>
-    <version>157.0.8103.51</version>
+    <version>157.0.8103.79</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/joakxwrgjhhcrkplqg7sgj2g2u_157.0.8103.51/157.0.8103.51_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/joakxwrgjhhcrkplqg7sgj2g2u_157.0.8103.51/157.0.8103.51_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/acq6idvhxkcwr5otpuozd2yp6bia_157.0.8103.79/157.0.8103.79_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/acq6idvhxkcwr5otpuozd2yp6bia_157.0.8103.79/157.0.8103.79_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>b6c2d0b1bcf0df79d6d8940c64d8c29b966fc57c0ef989808529498a348fb0c1</sha256>
-    <size>454243240</size>
+    <sha256>b9342a5e718678ee56ac876900672a54f7eff205c9178072b8a833d2bd09c910</sha256>
+    <size>454269352</size>
   </stable32>
   <stable64>
-    <version>157.0.8103.51</version>
+    <version>157.0.8103.79</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/hhb3n3my4axozv7qmzlcqqaspi_157.0.8103.51/157.0.8103.51_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/hhb3n3my4axozv7qmzlcqqaspi_157.0.8103.51/157.0.8103.51_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/acab3swyzqgszbsf6npoanqbvgvq_157.0.8103.79/157.0.8103.79_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/acab3swyzqgszbsf6npoanqbvgvq_157.0.8103.79/157.0.8103.79_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>cc7aca3546b69255ecc2419c2cbfd51a21ed47837e953cf9d84ab60eca758d57</sha256>
-    <size>530228648</size>
+    <sha256>acb77d39d1759408ad6f9874081c25e68cd042f1de6145064bbc9c2be4ad733e</sha256>
+    <size>528945064</size>
   </stable64>
   <beta32>
     <version>158.0.8127.18</version>
@@ -56,21 +56,21 @@
     <size>536310184</size>
   </dev64>
   <canary32>
-    <version>160.0.8155.0</version>
+    <version>160.0.8157.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/ddp2uxsxkms2veeljlfbz346ji_160.0.8155.0/160.0.8155.0_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/ddp2uxsxkms2veeljlfbz346ji_160.0.8155.0/160.0.8155.0_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/lvg2x7c4rc4fabnngmelkzppym_160.0.8157.0/160.0.8157.0_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/lvg2x7c4rc4fabnngmelkzppym_160.0.8157.0/160.0.8157.0_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>ef7d2628ed0813f7853b3a0ed639582c9f11147f8014d0b161b6ecc3b1f3c8c7</sha256>
-    <size>443372456</size>
+    <sha256>2d9be9323b395eb50740a3187493e040271f60fa7d4f16acabfbd62e79a7af5f</sha256>
+    <size>444438952</size>
   </canary32>
   <canary64>
-    <version>160.0.8155.0</version>
+    <version>160.0.8157.0</version>
     <download>
-      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/gsduk4jzdiwbggeo5m73fuqedi_160.0.8155.0/160.0.8155.0_chrome_installer_uncompressed.exe</url>
-      <url>https://dl.google.com/release2/chrome/gsduk4jzdiwbggeo5m73fuqedi_160.0.8155.0/160.0.8155.0_chrome_installer_uncompressed.exe</url>
+      <url>https://edgedl.me.gvt1.com/edgedl/release2/chrome/adukojlilglvcb6kgnhllsoll6fq_160.0.8157.0/160.0.8157.0_chrome_installer_uncompressed.exe</url>
+      <url>https://dl.google.com/release2/chrome/adukojlilglvcb6kgnhllsoll6fq_160.0.8157.0/160.0.8157.0_chrome_installer_uncompressed.exe</url>
     </download>
-    <sha256>2862d675e1c237a48d848782fb10c59fabc86d15222e8674cbe56a85b3bb79d6</sha256>
-    <size>540681640</size>
+    <sha256>ebcb883d4d0741aa7f93ed221daf7ff5f474a80986710e9584ff27f8c55ac0eb</sha256>
+    <size>541577128</size>
   </canary64>
 </chromechecker>
